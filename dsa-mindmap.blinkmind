@@ -1,12 +1,29 @@
 {
   "rootTopicKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
   "editorRootTopicKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
-  "focusKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+  "focusKey": "023d497b-a52e-40bb-940e-48a1824bf1ec",
   "extData": {},
   "topics": [
     {
       "key": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
       "parentKey": null,
+      "subKeys": [
+        "023d497b-a52e-40bb-940e-48a1824bf1ec",
+        "153751ed-3a72-4136-8576-b34c34c2b3d1",
+        "630c5336-cd8b-48d7-887f-109f9e1f404b"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "DSA"
+        }
+      ]
+    },
+    {
+      "key": "023d497b-a52e-40bb-940e-48a1824bf1ec",
+      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
       "subKeys": [],
       "collapse": false,
       "style": null,
@@ -14,6 +31,36 @@
         {
           "type": "CONTENT",
           "data": "Big O Notation"
+        },
+        {
+          "type": "DESC",
+          "data": "**Big O notation** is used to describe the _performance_ or _complexity_ of an algorithm. Big O specifically describes the worst\\-case scenario, and can be used to describe the execution time required or the space used \\(e.g. in memory or on disk\\) by an algorithm."
+        }
+      ]
+    },
+    {
+      "key": "153751ed-3a72-4136-8576-b34c34c2b3d1",
+      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Data\nStructures"
+        }
+      ]
+    },
+    {
+      "key": "630c5336-cd8b-48d7-887f-109f9e1f404b",
+      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Algorithms"
         }
       ]
     }
@@ -64,5 +111,5 @@
       }
     }
   },
-  "formatVersion": null
+  "formatVersion": "0.0"
 }
