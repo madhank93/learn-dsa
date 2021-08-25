@@ -1,8 +1,12 @@
 {
   "rootTopicKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
   "editorRootTopicKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
-  "focusKey": "023d497b-a52e-40bb-940e-48a1824bf1ec",
-  "extData": {},
+  "focusKey": "630c5336-cd8b-48d7-887f-109f9e1f404b",
+  "extData": {
+    "TOPIC_REFERENCE": {
+      "reference": {}
+    }
+  },
   "topics": [
     {
       "key": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
@@ -24,7 +28,10 @@
     {
       "key": "023d497b-a52e-40bb-940e-48a1824bf1ec",
       "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
-      "subKeys": [],
+      "subKeys": [
+        "7c8d779f-8730-4a23-a7d9-368ee2da0f66",
+        "8a763c54-a7f0-403c-95ab-f3d45e82b3f0"
+      ],
       "collapse": false,
       "style": null,
       "blocks": [
@@ -34,7 +41,7 @@
         },
         {
           "type": "DESC",
-          "data": "**Big O notation** is used to describe the _performance_ or _complexity_ of an algorithm. Big O specifically describes the worst\\-case scenario, and can be used to describe the execution time required or the space used \\(e.g. in memory or on disk\\) by an algorithm."
+          "data": "**Big O notation** is used to describe the **_performance_** or **_complexity_** of an algorithm. Big O specifically describes the worst\\-case scenario, and can be used to describe the execution time required or the space used \\(e.g. in memory or on disk\\) by an algorithm.\n\n**_Common notations:_**\n1. Omega\\(Ω\\)\n1. Theta \\(θ\\)\n1. Omicron\\(O\\) or Big O\n\n"
         }
       ]
     },
@@ -61,6 +68,36 @@
         {
           "type": "CONTENT",
           "data": "Algorithms"
+        },
+        {
+          "type": "DESC",
+          "data": "**Algorithm **is a process or set of steps to accomplish a certain task.\n\n| **Algorithms** | **Programs** |\n|:---:|:---:|\n| It is a step\\-by\\-step procedure for solving the problem | It is the implementation in “code” that instructs the computer how to execute the algorithm. |\n"
+        }
+      ]
+    },
+    {
+      "key": "7c8d779f-8730-4a23-a7d9-368ee2da0f66",
+      "parentKey": "023d497b-a52e-40bb-940e-48a1824bf1ec",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Time complexity"
+        }
+      ]
+    },
+    {
+      "key": "8a763c54-a7f0-403c-95ab-f3d45e82b3f0",
+      "parentKey": "023d497b-a52e-40bb-940e-48a1824bf1ec",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Space complexity"
         }
       ]
     }
