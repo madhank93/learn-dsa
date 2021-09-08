@@ -1,7 +1,7 @@
 {
   "rootTopicKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
   "editorRootTopicKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
-  "focusKey": "630c5336-cd8b-48d7-887f-109f9e1f404b",
+  "focusKey": "aca84290-cc11-4438-87fe-b92d95b1bd6a",
   "extData": {
     "TOPIC_REFERENCE": {
       "reference": {}
@@ -9,12 +9,26 @@
   },
   "topics": [
     {
+      "key": "ce824433-bb10-421d-939a-6f633651ecf1",
+      "parentKey": "a5629588-5712-4ff6-88e5-e39d0984e2b9",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"background\":\"#b6adae\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Explore concrete\nexamples"
+        }
+      ]
+    },
+    {
       "key": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
       "parentKey": null,
       "subKeys": [
         "023d497b-a52e-40bb-940e-48a1824bf1ec",
         "153751ed-3a72-4136-8576-b34c34c2b3d1",
-        "630c5336-cd8b-48d7-887f-109f9e1f404b"
+        "630c5336-cd8b-48d7-887f-109f9e1f404b",
+        "a5629588-5712-4ff6-88e5-e39d0984e2b9"
       ],
       "collapse": false,
       "style": null,
@@ -22,6 +36,49 @@
         {
           "type": "CONTENT",
           "data": "DSA"
+        }
+      ]
+    },
+    {
+      "key": "630c5336-cd8b-48d7-887f-109f9e1f404b",
+      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Algorithms"
+        },
+        {
+          "type": "DESC",
+          "data": "**Algorithm **is a process or set of steps to accomplish a certain task.\n\n| **Algorithms** | **Programs** |\n|:---:|:---:|\n| It is a step\\-by\\-step procedure for solving the problem | It is the implementation in “code” that instructs the computer how to execute the algorithm. |\n"
+        }
+      ]
+    },
+    {
+      "key": "8a763c54-a7f0-403c-95ab-f3d45e82b3f0",
+      "parentKey": "023d497b-a52e-40bb-940e-48a1824bf1ec",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Space complexity"
+        }
+      ]
+    },
+    {
+      "key": "153751ed-3a72-4136-8576-b34c34c2b3d1",
+      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Data\nStructures"
         }
       ]
     },
@@ -46,32 +103,45 @@
       ]
     },
     {
-      "key": "153751ed-3a72-4136-8576-b34c34c2b3d1",
-      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "key": "aca84290-cc11-4438-87fe-b92d95b1bd6a",
+      "parentKey": "a5629588-5712-4ff6-88e5-e39d0984e2b9",
       "subKeys": [],
       "collapse": false,
       "style": null,
       "blocks": [
         {
           "type": "CONTENT",
-          "data": "Data\nStructures"
+          "data": "Solve /\nSimplify"
         }
       ]
     },
     {
-      "key": "630c5336-cd8b-48d7-887f-109f9e1f404b",
-      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "key": "0651eb64-886b-4476-9b1a-e330522b0f1c",
+      "parentKey": "a5629588-5712-4ff6-88e5-e39d0984e2b9",
       "subKeys": [],
       "collapse": false,
       "style": null,
       "blocks": [
         {
           "type": "CONTENT",
-          "data": "Algorithms"
+          "data": "Breat it\ndown"
+        }
+      ]
+    },
+    {
+      "key": "54e0233a-5759-4284-846c-9d5b976745ed",
+      "parentKey": "a5629588-5712-4ff6-88e5-e39d0984e2b9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Understanding\nProblem"
         },
         {
           "type": "DESC",
-          "data": "**Algorithm **is a process or set of steps to accomplish a certain task.\n\n| **Algorithms** | **Programs** |\n|:---:|:---:|\n| It is a step\\-by\\-step procedure for solving the problem | It is the implementation in “code” that instructs the computer how to execute the algorithm. |\n"
+          "data": "## Understand the problem\n\n* Can I restate the problem in my own words ?\n* What are the inputs that go into the problem ?\n* What are the outputs that should come from the solution to the problem ?\n* Can the outputs be determined from the inputs ? Do I have enough info to solve the problem ?\n* How should I label the important pieces of data that are a part of the problem ?\n\n"
         }
       ]
     },
@@ -89,15 +159,24 @@
       ]
     },
     {
-      "key": "8a763c54-a7f0-403c-95ab-f3d45e82b3f0",
-      "parentKey": "023d497b-a52e-40bb-940e-48a1824bf1ec",
-      "subKeys": [],
+      "key": "a5629588-5712-4ff6-88e5-e39d0984e2b9",
+      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "subKeys": [
+        "54e0233a-5759-4284-846c-9d5b976745ed",
+        "ce824433-bb10-421d-939a-6f633651ecf1",
+        "0651eb64-886b-4476-9b1a-e330522b0f1c",
+        "aca84290-cc11-4438-87fe-b92d95b1bd6a"
+      ],
       "collapse": false,
       "style": null,
       "blocks": [
         {
           "type": "CONTENT",
-          "data": "Space complexity"
+          "data": "Problem Solving\napproach"
+        },
+        {
+          "type": "DESC",
+          "data": ""
         }
       ]
     }
