@@ -1,7 +1,7 @@
 {
   "rootTopicKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
   "editorRootTopicKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
-  "focusKey": "10e19250-68fb-4c0d-adcf-0d09d059f9a0",
+  "focusKey": "07e17ca6-badb-46b8-aee4-87d608152c7a",
   "extData": {
     "TOPIC_REFERENCE": {
       "reference": {}
@@ -120,7 +120,8 @@
       "key": "a915244e-ded5-43e6-a7c8-cbdc60f8e82f",
       "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
       "subKeys": [
-        "10e19250-68fb-4c0d-adcf-0d09d059f9a0"
+        "10e19250-68fb-4c0d-adcf-0d09d059f9a0",
+        "07e17ca6-badb-46b8-aee4-87d608152c7a"
       ],
       "collapse": false,
       "style": null,
@@ -128,6 +129,19 @@
         {
           "type": "CONTENT",
           "data": "Problem solving\npatterns"
+        }
+      ]
+    },
+    {
+      "key": "07e17ca6-badb-46b8-aee4-87d608152c7a",
+      "parentKey": "a915244e-ded5-43e6-a7c8-cbdc60f8e82f",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Multi pointer\npattern"
         }
       ]
     },

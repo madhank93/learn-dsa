@@ -1,3 +1,11 @@
+/**
+ * Given two strings, write a function to determine if the second string is an anagram of the first.
+ * An anagram is a word, phrase, or name formed by rearranging the letters of another, such as
+ * cinema , formed from iceman
+ */
+
+import { assert } from "chai";
+
 function isAnagram(str1: string, str2: string): boolean {
   if (str1.length != str2.length) {
     return false;
@@ -21,8 +29,8 @@ function isAnagram(str1: string, str2: string): boolean {
   return true;
 }
 
-console.log(isAnagram("", ""));
-console.log(isAnagram("aaz", "zza"));
-console.log(isAnagram("anagram", "nagaram"));
-console.log(isAnagram("rat", "car"));
-console.log(isAnagram("qwerty", "qeywrt"));
+assert.isTrue(isAnagram("", ""));
+assert.isTrue(isAnagram("anagram", "nagaram"));
+assert.isTrue(isAnagram("qwerty", "qeywrt"));
+assert.isFalse(isAnagram("aaz", "zza"));
+assert.isFalse(isAnagram("rat", "car"));
