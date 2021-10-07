@@ -4,12 +4,13 @@
     "module": "commonjs",
     "lib": ["es6"],
     "allowJs": true,
-    "outDir": "build",
     "rootDir": "./",
+    "outDir": "bin",
     "strict": true,
     "types": ["node"],
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "sourceMap": true
   }
 }
