@@ -1,0 +1,288 @@
+{
+  "rootTopicKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+  "editorRootTopicKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+  "focusKey": "023d497b-a52e-40bb-940e-48a1824bf1ec",
+  "extData": {
+    "TOPIC_REFERENCE": {
+      "reference": {}
+    }
+  },
+  "topics": [
+    {
+      "key": "ce824433-bb10-421d-939a-6f633651ecf1",
+      "parentKey": "a5629588-5712-4ff6-88e5-e39d0984e2b9",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"background\":\"#b6adae\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Explore concrete\nexamples"
+        }
+      ]
+    },
+    {
+      "key": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "parentKey": null,
+      "subKeys": [
+        "023d497b-a52e-40bb-940e-48a1824bf1ec",
+        "153751ed-3a72-4136-8576-b34c34c2b3d1",
+        "630c5336-cd8b-48d7-887f-109f9e1f404b",
+        "a5629588-5712-4ff6-88e5-e39d0984e2b9",
+        "a915244e-ded5-43e6-a7c8-cbdc60f8e82f"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "DSA"
+        }
+      ]
+    },
+    {
+      "key": "630c5336-cd8b-48d7-887f-109f9e1f404b",
+      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Algorithms"
+        },
+        {
+          "type": "DESC",
+          "data": "**Algorithm **is a process or set of steps to accomplish a certain task.\n\n| **Algorithms** | **Programs** |\n|:---:|:---:|\n| It is a step\\-by\\-step procedure for solving the problem | It is the implementation in “code” that instructs the computer how to execute the algorithm. |\n"
+        }
+      ]
+    },
+    {
+      "key": "8a763c54-a7f0-403c-95ab-f3d45e82b3f0",
+      "parentKey": "023d497b-a52e-40bb-940e-48a1824bf1ec",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Space complexity"
+        }
+      ]
+    },
+    {
+      "key": "153751ed-3a72-4136-8576-b34c34c2b3d1",
+      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Data\nStructures"
+        }
+      ]
+    },
+    {
+      "key": "10e19250-68fb-4c0d-adcf-0d09d059f9a0",
+      "parentKey": "a915244e-ded5-43e6-a7c8-cbdc60f8e82f",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Frequency counter\npattern"
+        }
+      ]
+    },
+    {
+      "key": "023d497b-a52e-40bb-940e-48a1824bf1ec",
+      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "subKeys": [
+        "7c8d779f-8730-4a23-a7d9-368ee2da0f66",
+        "8a763c54-a7f0-403c-95ab-f3d45e82b3f0"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Big O Notation"
+        },
+        {
+          "type": "DESC",
+          "data": "**Big O notation** is used to describe the **_performance_** or** ****_complexity_**** **of an algorithm. Big O specifically describes the worst\\-case scenario, and can be used to describe the execution time required or the space used \\(e.g. in memory or on disk\\) by an algorithm.\n\n_Common notations:_\n1. Omega\\(Ω\\)\n1. Theta \\(θ\\)\n1. Omicron\\(O\\) or Big O\n\n"
+        }
+      ]
+    },
+    {
+      "key": "a915244e-ded5-43e6-a7c8-cbdc60f8e82f",
+      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "subKeys": [
+        "10e19250-68fb-4c0d-adcf-0d09d059f9a0",
+        "07e17ca6-badb-46b8-aee4-87d608152c7a"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Problem solving\npatterns"
+        }
+      ]
+    },
+    {
+      "key": "07e17ca6-badb-46b8-aee4-87d608152c7a",
+      "parentKey": "a915244e-ded5-43e6-a7c8-cbdc60f8e82f",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Multi pointer\npattern"
+        }
+      ]
+    },
+    {
+      "key": "aca84290-cc11-4438-87fe-b92d95b1bd6a",
+      "parentKey": "a5629588-5712-4ff6-88e5-e39d0984e2b9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Solve /\nSimplify"
+        }
+      ]
+    },
+    {
+      "key": "0651eb64-886b-4476-9b1a-e330522b0f1c",
+      "parentKey": "a5629588-5712-4ff6-88e5-e39d0984e2b9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Breat it\ndown"
+        }
+      ]
+    },
+    {
+      "key": "d86fb1db-1080-4339-9216-b61ad91acaf5",
+      "parentKey": "a5629588-5712-4ff6-88e5-e39d0984e2b9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Refractor"
+        }
+      ]
+    },
+    {
+      "key": "54e0233a-5759-4284-846c-9d5b976745ed",
+      "parentKey": "a5629588-5712-4ff6-88e5-e39d0984e2b9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Understanding\nProblem"
+        },
+        {
+          "type": "DESC",
+          "data": "## Understand the problem\n\n* Can I restate the problem in my own words ?\n* What are the inputs that go into the problem ?\n* What are the outputs that should come from the solution to the problem ?\n* Can the outputs be determined from the inputs ? Do I have enough info to solve the problem ?\n* How should I label the important pieces of data that are a part of the problem ?\n\n"
+        }
+      ]
+    },
+    {
+      "key": "7c8d779f-8730-4a23-a7d9-368ee2da0f66",
+      "parentKey": "023d497b-a52e-40bb-940e-48a1824bf1ec",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Time complexity"
+        }
+      ]
+    },
+    {
+      "key": "a5629588-5712-4ff6-88e5-e39d0984e2b9",
+      "parentKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
+      "subKeys": [
+        "54e0233a-5759-4284-846c-9d5b976745ed",
+        "ce824433-bb10-421d-939a-6f633651ecf1",
+        "0651eb64-886b-4476-9b1a-e330522b0f1c",
+        "aca84290-cc11-4438-87fe-b92d95b1bd6a",
+        "d86fb1db-1080-4339-9216-b61ad91acaf5"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Problem Solving\napproach"
+        },
+        {
+          "type": "DESC",
+          "data": ""
+        }
+      ]
+    }
+  ],
+  "config": {
+    "readOnly": false,
+    "allowUndo": true,
+    "layoutDir": 2,
+    "theme": {
+      "name": "default",
+      "randomColor": true,
+      "background": "rgb(57,60,65)",
+      "highlightColor": "#50C9CE",
+      "marginH": 60,
+      "marginV": 20,
+      "contentStyle": {
+        "lineHeight": "1.5",
+        "fontSize": "16px"
+      },
+      "linkStyle": {
+        "lineRadius": 5,
+        "lineType": "curve",
+        "lineWidth": "3px"
+      },
+      "rootTopic": {
+        "contentStyle": {
+          "fontSize": "36px"
+        },
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": "3px"
+        }
+      },
+      "primaryTopic": {
+        "contentStyle": {
+          "fontSize": "24px"
+        },
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": "3px"
+        }
+      },
+      "normalTopic": {
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": "3px"
+        }
+      }
+    }
+  },
+  "formatVersion": "0.0"
+}
