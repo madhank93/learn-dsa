@@ -43,17 +43,17 @@ assert.isFalse(isSameSquare([1, 2, 3], [4, 5, 6]));
  */
 function isSameSquareOptimized(arr1: number[], arr2: number[]) {
   if (arr1.length != arr2.length) return false;
+
   let frequencyCounter1: Record<string, number> = {};
   let frequencyCounter2: Record<string, number> = {};
-  for (let value of arr1) {
-    frequencyCounter1[value] = (frequencyCounter1[value] || 0) + 1;
-  }
-  for (let value of arr2) {
-    frequencyCounter2[value] = (frequencyCounter2[value] || 0) + 1;
+
+  for (let element of arr1) {
+    frequencyCounter1[element] = (frequencyCounter1[element] || 0) + 1;
   }
 
-  console.log(frequencyCounter1);
-  console.log(frequencyCounter2);
+  for (let element of arr2) {
+    frequencyCounter2[element] = (frequencyCounter2[element] || 0) + 1;
+  }
 
   for (let key in frequencyCounter1) {
     if (!(parseInt(key) ** 2 in frequencyCounter2)) {
