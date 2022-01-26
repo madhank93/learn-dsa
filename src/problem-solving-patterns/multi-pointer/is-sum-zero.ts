@@ -1,11 +1,13 @@
+import { expect } from "chai";
+
 /**
  * Write a program that takes a sorted array of integers.
  * And it should find the pair where the sum is 0.
  * Return an array that includes both values that sum to zero or undefined if a pair not exists
+ *
+ * @param arr sorted integer array
+ * @returns integer array
  */
-
-import { expect } from "chai";
-
 function isSumOfTwoValuesZero(arr: number[]): number[] | undefined {
   let left = 0;
   let right = arr.length - 1;
