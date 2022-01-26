@@ -7,17 +7,14 @@ import { assert } from "chai";
  * @param args multiple arguments of `number` or `strings`
  * @returns boolean or null
  */
-function areThereDuplicates(...args: number[] | string[]): boolean | null {
-  const occurrence: Record<string, number> = {};
+function areThereDuplicates(...args: number[] | string[]) {
+  const pointer1: number = 0;
+  const pointer2: number = 1;
 
   if (args.length === 0) return null;
 
-  for (let value of args) {
-    occurrence[value] = (occurrence[value] || 0) + 1;
-  }
-
-  for (let key in occurrence) {
-    if (occurrence[key] > 1) return true;
+  for (let i: number = 0; i < args.length - 1; i++) {
+    if (args[i] == args[i + 1]) return true;
   }
 
   return false;
