@@ -32,11 +32,11 @@ expect(maxSubArray([1, 2, 3, 4, 5, -6, 7], 2)).to.equal(9);
 expect(maxSubArray([], 3)).to.equal(0);
 expect(maxSubArray([1, 2, 3, 4], 0)).to.equal(0);
 
-function maxSubArrayOptimized(arr: number[], num: number) {
-  let maxSum = 0;
-  let tmpSum = 0;
+function maxSubArrayOptimized(arr: number[], num: number): number {
+  let maxSum: number = 0;
+  let tmpSum: number = 0;
 
-  if (arr.length === 0 || num === 0) return 0;
+  if (arr.length === 0 || num === 0 || arr.length < num) return 0;
 
   for (let i: number = 0; i < num; i++) {
     maxSum = maxSum + arr[i];
@@ -45,7 +45,6 @@ function maxSubArrayOptimized(arr: number[], num: number) {
   tmpSum = maxSum;
 
   for (let i = num; i < arr.length; i++) {
-    console.log(`${tmpSum} - ${arr[i - num]} + ${arr[i]}`);
     tmpSum = tmpSum - arr[i - num] + arr[i];
     if (tmpSum > maxSum) {
       maxSum = tmpSum;
@@ -60,3 +59,5 @@ expect(maxSubArrayOptimized([1, 2, 3, 4, 5, 6, 7], 1)).to.equal(7);
 expect(maxSubArrayOptimized([1, 2, 3, 4, 5, -6, 7], 2)).to.equal(9);
 expect(maxSubArrayOptimized([], 3)).to.equal(0);
 expect(maxSubArrayOptimized([1, 2, 3, 4], 0)).to.equal(0);
+expect(maxSubArrayOptimized([1, 2, 3], 3)).to.equal(6);
+expect(maxSubArrayOptimized([2, 3], 3)).to.equal(0);
