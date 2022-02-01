@@ -54,6 +54,7 @@ function maxSubArrayOptimized(arr: number[], num: number): number {
 }
 
 expect(maxSubArrayOptimized([1, 2, 3, 4, 5, 6, 7], 3)).to.equal(18);
+expect(maxSubArrayOptimized([-1, -2, -3, -4], 2)).to.equal(-3);
 expect(maxSubArrayOptimized([100, 2, 0, 114, 5, 20, 70], 3)).to.equal(139);
 expect(maxSubArrayOptimized([1, 2, 3, 4, 5, 6, 7], 1)).to.equal(7);
 expect(maxSubArrayOptimized([1, 2, 3, 4, 5, -6, 7], 2)).to.equal(9);
