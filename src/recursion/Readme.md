@@ -13,7 +13,7 @@ The condition where the recursion ends. Stops a recursive function from executin
 
 ### How does it works ?
 
-Invoke the same function with a different input until you reach your base case.
+Invoke the same function with a different input until you reach your base case. When a function has been invoked it is automatically added to the Call Stack (call stack is a mechanism to keep track of the point to which each active subroutine should return control when it finishes executing). When ever the call stack hits a **RETURN**, it pops the current function off from the stack and gives back the control to the function that has been called.
 
 ```typescript
 function factorial(num: number): number {
