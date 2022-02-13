@@ -1,3 +1,5 @@
+import { assert } from "chai";
+
 /**
  * Write a function which takes a string and return true if the string passed
  * to it is a palindrome.
@@ -11,3 +13,11 @@ function isPalindrome(str: string): boolean {
   if (str[0] === str.slice(-1)) return isPalindrome(str.slice(1, -1));
   return false;
 }
+
+assert.isTrue(isPalindrome("madam"));
+assert.isTrue(isPalindrome("aa"));
+assert.isFalse(isPalindrome("ab"));
+assert.isTrue(isPalindrome("redder"));
+assert.isTrue(isPalindrome("racecar"));
+assert.isFalse(isPalindrome("banana"));
+assert.isFalse(isPalindrome("renter"));
