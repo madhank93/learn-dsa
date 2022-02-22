@@ -2,6 +2,8 @@
 
 - [Colt Steele - JS Algorithms and Data Structures](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/)
 
+- [ZTM - Master the Coding Interview: Data Structures + Algorithms](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/)
+
 - [Jenny's Lectures - DSA](https://www.youtube.com/playlist?list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU)
 
 - [Rob Edwards - Data Structures](https://www.youtube.com/playlist?list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk)
@@ -15,5 +17,3 @@
 - [DSA implemented in JS](https://github.com/trekhleb/javascript-algorithms)
 
 - [Algorithm Visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
-
-- [Kunal's DSA](https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ)

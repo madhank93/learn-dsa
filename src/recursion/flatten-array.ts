@@ -2,6 +2,12 @@ import { expect } from "chai";
 
 type NestedArray<T> = Array<NestedArray<T> | T>;
 
+/**
+ * Write a function that takes an nested array and returns flattened array
+ *
+ * @param arr takes nested arrays
+ * @returns new array with all values flattened
+ */
 function flattenArray<T>(arr: NestedArray<T>): T[] {
   var result: T[] = [];
   for (var i = 0; i < arr.length; i++) {
