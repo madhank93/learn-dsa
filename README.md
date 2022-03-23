@@ -17,3 +17,5 @@
 - [DSA implemented in JS](https://github.com/trekhleb/javascript-algorithms)
 
 - [Algorithm Visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
+
+- [Grokking coding interview](https://github.com/Chanda-Abdul/Grokking-the-Coding-Interview-Patterns)
