@@ -1,5 +1,15 @@
 import { expect } from "chai";
 
+/**
+ * Write a function which accepts a sorted array and a target value
+ * And it returns the index at which value exists else return -1
+ *
+ * for more info - `https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search`
+ *
+ * @param arr sorted array
+ * @param target value to be found in the given array
+ * @returns index at which value exists; else returns -1
+ */
 function binarySearch(arr: number[], target: number): number {
   let start = 0;
   let end = arr.length - 1;

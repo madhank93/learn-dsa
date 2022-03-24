@@ -1,7 +1,7 @@
 {
   "rootTopicKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
   "editorRootTopicKey": "ce8526e2-816e-4dc1-8c35-4925d9f9ca51",
-  "focusKey": "54e0233a-5759-4284-846c-9d5b976745ed",
+  "focusKey": "023d497b-a52e-40bb-940e-48a1824bf1ec",
   "extData": {
     "TOPIC_REFERENCE": {
       "reference": {}
@@ -116,7 +116,7 @@
         },
         {
           "type": "DESC",
-          "data": "**Big O notation** is used to describe the **performance** or** complexity **of an algorithm. Big O specifically describes the worst\\-case scenario, and can be used to describe the execution time required or the space used \\(e.g. in memory or on disk\\) by an algorithm.\n\n**Common notations**_:_\n1. Omega\\(Ω\\)\n1. Theta \\(θ\\)\n1. Omicron\\(O\\) or Big O\n\n\n\n\n### Big\\-O notation :\n\n* Constant time \\- O\\(1\\)\n\n"
+          "data": "**Big O notation** is used to describe the **performance** or** complexity **of an algorithm. Big O specifically describes the worst\\-case scenario, and can be used to describe the execution time required or the space used \\(e.g. in memory or on disk\\) by an algorithm.\n\n**Common notations**_:_\n1. Omega\\(Ω\\)\n1. Theta \\(θ\\)\n1. Omicron\\(O\\) or Big O\n\n\n\n\n### Big\\-O notation :\n\n* **O\\(1\\)**  \\- _**Constant**_ \\- no loops\n* **O\\(log N\\)** \\- _**Logarithmic**_ \\- usually searching algorithms have log n if they are sorted \\(Binary Search\\)\n* **O\\(n\\)** \\- **_Linear_** \\- for loops, while loops through n items\n* **O\\(n log\\(n\\)\\)** \\- _**Log Linear**_ \\- usually sorting operations\n* **O\\(n^2\\)** \\- _**Quadratic**_ \\- every element in a collection needs to be compared to ever other element. Two nested loops\n* **O\\(2^n\\)** \\- _**Exponential**_ \\- recursive algorithms that solves a problem of size N\n* **O\\(n\\!\\)** \\- _**Factorial**_ \\- you are adding a loop for every element\n\n"
         }
       ]
     },
