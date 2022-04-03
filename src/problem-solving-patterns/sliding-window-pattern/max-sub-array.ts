@@ -1,3 +1,5 @@
+import { expect } from "chai";
+
 /**
  * Write a function which accepts an integer array and a number called `num`
  * And it should calculate the max sum of `num` consecutive elements in the array
@@ -6,9 +8,6 @@
  * @param num max sum of consecutive elements
  * @returns number
  */
-
-import { expect } from "chai";
-
 function maxSubArray(arr: number[], num: number): number {
   if (arr.length === 0 || num === 0) return 0;
 

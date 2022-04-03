@@ -1,3 +1,5 @@
+import { expect } from "chai";
+
 /**
  * Write a function accepts a sorted array, and counts the unique values in the array
  * There can be a negative numbers in the array but it will be always sorted
@@ -5,9 +7,6 @@
  * @param arr sorted integer array
  * @returns number
  */
-
-import { expect } from "chai";
-
 function uniqueValueCount(arr: number[]) {
   let i = 0;
 
