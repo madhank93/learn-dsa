@@ -1,32 +1,35 @@
 {
-    "name": "dsa",
-    "version": "1.0.0",
-    "description": "DSA",
-    "main": "index.js",
-    "directories": {
-        "doc": "docs"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/madhank93/learn-dsa.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/madhank93/learn-dsa/issues"
-    },
-    "homepage": "https://github.com/madhank93/learn-dsa#readme",
-    "devDependencies": {
-        "@types/node": "^16.3.1",
-        "ts-node": "^10.2.1",
-        "typescript": "^4.3.5"
-    },
-    "dependencies": {
-        "@types/chai": "^4.2.21",
-        "chai": "^4.3.4"
-    }
+  "name": "dsa",
+  "version": "1.0.0",
+  "description": "DSA",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "gen-dir": "rm DIRECTORY.md && ts-node ./utils/generate-dir-struct.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhank93/learn-dsa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madhank93/learn-dsa/issues"
+  },
+  "homepage": "https://github.com/madhank93/learn-dsa#readme",
+  "devDependencies": {
+    "@types/node": "^16.3.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/mustache": "^4.1.2",
+    "chai": "^4.3.4",
+    "dir-parser": "^2.1.4",
+    "mustache": "^4.2.0"
+  }
 }
