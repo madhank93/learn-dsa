@@ -20,6 +20,6 @@
 
 - [Grokking coding interview](https://github.com/Chanda-Abdul/Grokking-the-Coding-Interview-Patterns)
 
-### List of Algorithms
+### List of solved problems
 
 See [directory](DIRECTORY.md) for easier navigation and better overview of the project.

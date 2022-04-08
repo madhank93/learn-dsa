@@ -1,5 +1,4 @@
 import parser from "dir-parser";
-import { render } from "mustache";
 import fs from "fs";
 
 async function getParseDirectoryStructure() {
@@ -21,17 +20,14 @@ async function getParseDirectoryStructure() {
   return parsedDirStructure.children;
 }
 
-let header = `### {{name}}\n`;
-let link = `\n[{{name}}]({{{path}}})\n`;
-
-async function getFilesAndDir(dirFile: (parser.DirInfo | parser.FileInfo)[]) {
+function getFilesAndDir(dirFile: (parser.DirInfo | parser.FileInfo)[]) {
   dirFile.forEach((value) => {
     if (value.type === "directory") {
-      let output = render(header, value);
+      let output = `### ${value.name}\n`;
       writeToFile(output);
       getFilesAndDir(value.children);
     } else if (value.type === "file" && value.ext === ".ts") {
-      let output = render(link, value);
+      let output = `\n - [${value.name}](${value.path})\n`;
       writeToFile(output);
     }
   });
