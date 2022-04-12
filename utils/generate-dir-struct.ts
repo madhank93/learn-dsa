@@ -11,6 +11,7 @@ async function getParseDirectoryStructure() {
       "docs",
       "node_modules",
       "utils",
+      "README.md",
     ],
     getFiles: true,
     getChildren: true,
@@ -26,7 +27,10 @@ function getFilesAndDir(dirFile: (parser.DirInfo | parser.FileInfo)[]) {
       let output = `### ${value.name}\n`;
       writeToFile(output);
       getFilesAndDir(value.children);
-    } else if (value.type === "file" && value.ext === ".ts") {
+    } else if (
+      value.type === "file" &&
+      (value.ext === ".ts" || value.ext === ".md")
+    ) {
       let output = `\n - [${value.name}](${value.path})\n`;
       writeToFile(output);
     }

@@ -29,6 +29,8 @@
  - [min-sub-array-len.ts](src/problem-solving-patterns/sliding-window-pattern/min-sub-array-len.ts)
 ### recursion
 
+ - [Readme.md](src/recursion/Readme.md)
+
  - [capitalize-first.ts](src/recursion/capitalize-first.ts)
 
  - [flatten-array.ts](src/recursion/flatten-array.ts)
@@ -47,6 +49,8 @@
 
  - [reverse-string.ts](src/recursion/reverse-string.ts)
 ### searching-algorithms
+
+ - [Readme.md](src/searching-algorithms/Readme.md)
 
  - [binary-search.ts](src/searching-algorithms/binary-search.ts)
 
