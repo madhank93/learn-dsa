@@ -34,4 +34,4 @@ Binary search works on sorted arrays. Binary search begins by comparing an eleme
 
 Image courtesy - (https://blog.penjee.com/)
 
-![Linear vs Binary search](../../docs/img/searching-algo/binary-and-linear-search-animations.gif)
+![Linear vs Binary search](../../../docs/img/searching-algo/binary-and-linear-search-animations.gif)
