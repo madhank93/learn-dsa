@@ -45,7 +45,7 @@ factorial(5)
 ```
 
 <p align="center">
-<img src="../../docs/img/recursion/recursion.png" alt="Recursion" style="height: 300px; width:400px;"/>
+<img src="../../../docs/img/recursion/recursion.png" alt="Recursion" style="height: 300px; width:400px;"/>
 </p>
 
 ### Where things can go wrong ?
