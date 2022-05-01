@@ -59,3 +59,9 @@
 
  - [string-search.ts](src/algorithms/searching-algorithms/string-search.ts)
 ### data-structures
+### arrays
+
+ - [Readme.md](src/data-structures/arrays/Readme.md)
+
+ - [custom-array.ts](src/data-structures/arrays/custom-array.ts)
+### hash-tables
