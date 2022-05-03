@@ -65,3 +65,6 @@
 
  - [custom-array.ts](src/data-structures/arrays/custom-array.ts)
 ### hash-tables
+### leetcode
+
+ - [01-two-sum.ts](src/leetcode/01-two-sum.ts)
