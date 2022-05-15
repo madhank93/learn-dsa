@@ -1,6 +1,7 @@
-class Node {
+//TODO: Need to add tests
+class SingleNode {
   public value: number;
-  public next?: Node | null;
+  public next?: SingleNode | null;
 
   constructor(value: number) {
     this.value = value;
@@ -9,16 +10,16 @@ class Node {
 }
 
 class SingleLinkedList {
-  public head?: Node | null;
-  public tail?: Node | null;
+  public head?: SingleNode | null;
+  public tail?: SingleNode | null;
 
   constructor() {
     this.head = null;
     this.tail = null;
   }
 
-  public addToBack(value: number) {
-    const newNode = new Node(value);
+  public addToFront(value: number) {
+    const newNode = new SingleNode(value);
 
     if (this.head == null) {
       this.head = newNode;
@@ -27,6 +28,26 @@ class SingleLinkedList {
       this.tail!.next = newNode;
       this.tail = newNode;
     }
+  }
+
+  public insertAfter(searchValue: number, insertValue: number) {
+    for (
+      let searchNode = this.head;
+      searchNode != null;
+      searchNode = searchNode.next
+    ) {
+      if (searchNode.value === searchValue) {
+        if (searchNode === this.tail) {
+          this.addToFront(insertValue);
+        } else {
+          const newNode = new SingleNode(insertValue);
+          newNode.next = searchNode.next;
+          searchNode.next = newNode;
+        }
+        return true;
+      }
+    }
+    return false;
   }
 
   public printForward() {
@@ -38,9 +59,11 @@ class SingleLinkedList {
 
 let test = new SingleLinkedList();
 
-test.addToBack(5);
-test.addToBack(6);
-test.addToBack(10);
-test.addToBack(5);
+test.addToFront(5);
+test.addToFront(7);
+test.addToFront(9);
+
+test.insertAfter(9, 10);
+test.addToFront(15);
 
 test.printForward();
