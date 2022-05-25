@@ -19,7 +19,7 @@ class HashTable {
     this.table = new Array<Entry>(this.size);
   }
 
-  private hash(key: number) {
+  private hash(key: number): number {
     return key % this.size;
   }
 
