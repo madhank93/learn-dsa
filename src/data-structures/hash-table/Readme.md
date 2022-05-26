@@ -8,7 +8,14 @@ We can use an array to implement it, by interpreting the **_key_** as an array i
 
 ### Hash function
 
-It is a function that can transform any given **_key_** to an integer value in the range [0, N-1], where N is the capacity of the bucket array for the hash table. Which can be used as an **_index_** for Hash table.
+It is a function that can transform any given **_key_** to an integer value in the range [0, N-1], where N is the capacity of the bucket array (each cell of Hash table is considered as "bucket") for the hash table. Which can be used as an **_index_** for Hash table. There is also the possibility of two or more entries will be mapped to the same bucket, it is called **_Collision_**.
+
+### Resolving collision
+
+When such collision occurs, there are two options to handle it.
+
+- **Open Addressing** - Use another location in the hash table.
+- **Separate Chaining** - Change the structure of the hash table so that each array location can represent more than one value.
 
 ### More info
 
