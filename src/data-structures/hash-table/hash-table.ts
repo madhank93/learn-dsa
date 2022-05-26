@@ -23,23 +23,29 @@ class HashTable {
     return key % this.size;
   }
 
-  public put(key: number, value: string) {
+  public put(key: number, value: string): boolean {
     const index = this.hash(key);
-    for (let current = this.table[index]; current; current.nextEntry) {
-      if (current.value === value) {
+    for (
+      let current: Entry | null = this.table[index];
+      current != null;
+      current = current.nextEntry
+    ) {
+      // If key exists update the value
+      if (current.key === key) {
         current.value = value;
         return false;
       }
-
-      const newEntry = new Entry(key, value);
-      this.table[index].nextEntry = this.table[index];
-      this.table[index] = newEntry;
     }
+
+    // Key does not exist, add it to bucket
+    const newEntry = new Entry(key, value);
+    newEntry.nextEntry = this.table[index];
+    this.table[index] = newEntry;
+    return true;
   }
 
   public print() {
-    for (let offset = 0; offset < this.table.length; offset++) {
-      console.log(`${offset}`);
+    for (let offset = 0; offset < this.size; offset++) {
       for (
         let current: Entry | null = this.table[offset];
         current != null;
@@ -69,5 +75,8 @@ const ht = new HashTable();
 ht.put(244, "Test");
 ht.put(244, "Test 1");
 ht.put(240, "Test");
+ht.put(250, "Test 2");
 
 ht.print();
+
+console.log(ht);
