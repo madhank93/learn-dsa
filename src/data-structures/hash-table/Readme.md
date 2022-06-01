@@ -22,3 +22,5 @@ When such collision occurs, there are two options to handle it.
 - [Basics of Hash tables](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/)
 - [Hash tables - Algorithms Princeton](https://algs4.cs.princeton.edu/34hash/)
 - [Hashing](https://www.cpp.edu/~ftang/courses/CS240/lectures/hashing.htm)
+- [Hash Lectures](https://cseweb.ucsd.edu/~kube/cls/100/Lectures/lec16/lec16.html)
+- [Visual Open Hashing](https://www.cs.usfca.edu/~galles/visualization/OpenHash.html)

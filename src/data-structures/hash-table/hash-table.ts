@@ -44,6 +44,31 @@ class HashTable {
     return true;
   }
 
+  public get(key: number) {
+    const address = this.hash(key);
+
+    for (
+      let current: Entry | null = this.table[address];
+      current;
+      current = current.nextEntry
+    ) {
+      if (current.key === key) return current.value;
+    }
+  }
+
+  public remove(key: number) {
+    const address = this.hash(key);
+
+    for (
+      let current: Entry | null = this.table[address];
+      current;
+      current = current.nextEntry
+    ) {
+      if (current.key === key) {
+      }
+    }
+  }
+
   public print() {
     for (let offset = 0; offset < this.size; offset++) {
       for (
@@ -55,19 +80,6 @@ class HashTable {
       }
     }
   }
-
-  public remove(key: number) {
-    const index = this.hash(key);
-    let trailing = this.table[index];
-    let current = trailing;
-
-    while (current) {
-      if (key === current.key) {
-        if (this.table[index] === current) {
-        }
-      }
-    }
-  }
 }
 
 const ht = new HashTable();
@@ -76,7 +88,8 @@ ht.put(244, "Test");
 ht.put(244, "Test 1");
 ht.put(240, "Test");
 ht.put(250, "Test 2");
+ht.put(350, "Test 3");
 
 ht.print();
 
-console.log(ht);
+console.log(ht.get(240));
