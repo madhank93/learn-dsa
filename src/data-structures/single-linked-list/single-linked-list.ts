@@ -18,7 +18,7 @@ class SingleLinkedList {
     this.tail = null;
   }
 
-  public addToFront(value: number) {
+  public addToBack(value: number) {
     const newNode = new SingleNode(value);
 
     if (this.head == null) {
@@ -30,6 +30,23 @@ class SingleLinkedList {
     }
   }
 
+  public remove(value: number) {
+    for (
+      let searchNode = this.head;
+      searchNode != null;
+      searchNode = searchNode.next
+    ) {
+      if (searchNode.value === value) {
+        if (searchNode === this.head) {
+          this.head = this.head.next;
+          return true;
+        }
+        return true;
+      }
+    }
+    return false;
+  }
+
   public insertAfter(searchValue: number, insertValue: number) {
     for (
       let searchNode = this.head;
@@ -38,7 +55,7 @@ class SingleLinkedList {
     ) {
       if (searchNode.value === searchValue) {
         if (searchNode === this.tail) {
-          this.addToFront(insertValue);
+          this.addToBack(insertValue);
         } else {
           const newNode = new SingleNode(insertValue);
           newNode.next = searchNode.next;
@@ -59,11 +76,12 @@ class SingleLinkedList {
 
 let test = new SingleLinkedList();
 
-test.addToFront(5);
-test.addToFront(7);
-test.addToFront(9);
+test.addToBack(5);
+test.addToBack(7);
+test.addToBack(9);
 
 test.insertAfter(9, 10);
-test.addToFront(15);
+test.addToBack(15);
+test.remove(5);
 
 test.printForward();
