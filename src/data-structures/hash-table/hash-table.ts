@@ -56,6 +56,21 @@ class HashTable {
     }
   }
 
+  public getKeys() {
+    let keys: number[] = [];
+
+    for (let index = 0; index < this.size; index++) {
+      for (
+        let current: Entry | null = this.table[index];
+        current != null;
+        current = current.nextEntry
+      ) {
+        keys.push(current.key);
+      }
+    }
+    return keys;
+  }
+
   public remove(key: number) {
     const address = this.hash(key);
 
@@ -92,4 +107,4 @@ ht.put(350, "Test 3");
 
 ht.print();
 
-console.log(ht.get(240));
+console.log(ht.getKeys());
