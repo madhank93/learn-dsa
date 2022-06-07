@@ -31,18 +31,20 @@ class SingleLinkedList {
   }
 
   public remove(value: number) {
+    let prev = this.head;
     for (
       let searchNode = this.head;
       searchNode != null;
       searchNode = searchNode.next
     ) {
       if (searchNode.value === value) {
-        if (searchNode === this.head) {
-          this.head = this.head.next;
-          return true;
-        }
+        // Node to be deleted is Head
+        if (searchNode === this.head) this.head = this.head.next;
+        // Delete Non-Head node
+        prev!.next = searchNode.next;
         return true;
       }
+      prev = searchNode;
     }
     return false;
   }
@@ -82,6 +84,7 @@ test.addToBack(9);
 
 test.insertAfter(9, 10);
 test.addToBack(15);
-test.remove(5);
+test.remove(9);
+test.remove(10);
 
 test.printForward();
