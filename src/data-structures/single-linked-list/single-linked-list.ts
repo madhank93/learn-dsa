@@ -1,4 +1,6 @@
 //TODO: Need to add tests
+
+import { expect } from "chai";
 class SingleNode {
   public value: number;
   public next?: SingleNode | null;
