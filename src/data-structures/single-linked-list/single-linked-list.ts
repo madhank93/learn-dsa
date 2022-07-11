@@ -90,3 +90,13 @@ test.remove(9);
 test.remove(10);
 
 test.printForward();
+
+if (import.meta.vitest) {
+  const { describe, expect, it } = import.meta.vitest;
+
+  describe("Single linked list test", () => {
+    it("Pass", () => {
+      expect(1).toBe(1);
+    });
+  });
+}
