@@ -5,7 +5,7 @@ export default defineConfig({
     "import.meta.vitest": "undefined",
   },
   test: {
-    includeSource: ["src/**/*.ts"],
+    //includeSource: ["src/**/*.ts"],
     coverage: {
       reporter: ["text"],
     },

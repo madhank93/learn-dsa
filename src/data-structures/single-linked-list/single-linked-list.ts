@@ -1,6 +1,3 @@
-//TODO: Need to add tests
-
-import { expect } from "chai";
 class SingleNode {
   public value: number;
   public next?: SingleNode | null;
@@ -11,7 +8,7 @@ class SingleNode {
   }
 }
 
-class SingleLinkedList {
+export default class SingleLinkedList {
   public head?: SingleNode | null;
   public tail?: SingleNode | null;
 
@@ -42,6 +39,8 @@ class SingleLinkedList {
       if (searchNode.value === value) {
         // Node to be deleted is Head
         if (searchNode === this.head) this.head = this.head.next;
+        // Node to be deleted is Tail
+        if (searchNode === this.tail) this.tail = prev;
         // Delete Non-Head node
         prev!.next = searchNode.next;
         return true;
@@ -76,27 +75,4 @@ class SingleLinkedList {
       console.log(current.value);
     }
   }
-}
-
-let test = new SingleLinkedList();
-
-test.addToBack(5);
-test.addToBack(7);
-test.addToBack(9);
-
-test.insertAfter(9, 10);
-test.addToBack(15);
-test.remove(9);
-test.remove(10);
-
-test.printForward();
-
-if (import.meta.vitest) {
-  const { describe, expect, it } = import.meta.vitest;
-
-  describe("Single linked list test", () => {
-    it("Pass", () => {
-      expect(1).toBe(1);
-    });
-  });
 }
