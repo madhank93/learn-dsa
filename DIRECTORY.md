@@ -64,7 +64,30 @@
  - [Readme.md](src/data-structures/arrays/Readme.md)
 
  - [custom-array.ts](src/data-structures/arrays/custom-array.ts)
-### hash-tables
+### binary-tree
+
+ - [binary-tree.ts](src/data-structures/binary-tree/binary-tree.ts)
+### double-linked-list
+
+ - [double-linked-list.ts](src/data-structures/double-linked-list/double-linked-list.ts)
+
+ - [sentinel-double-linked-list.ts](src/data-structures/double-linked-list/sentinel-double-linked-list.ts)
+### hash-table
+
+ - [Readme.md](src/data-structures/hash-table/Readme.md)
+
+ - [first-recurring-character.ts](src/data-structures/hash-table/first-recurring-character.ts)
+
+ - [hash-table.ts](src/data-structures/hash-table/hash-table.ts)
+### single-linked-list
+
+ - [Readme.md](src/data-structures/single-linked-list/Readme.md)
+
+ - [single-linked-list.spec.ts](src/data-structures/single-linked-list/single-linked-list.spec.ts)
+
+ - [single-linked-list.ts](src/data-structures/single-linked-list/single-linked-list.ts)
 ### leetcode
 
  - [01-two-sum.ts](src/leetcode/01-two-sum.ts)
+
+ - [53-max-sub-array.ts](src/leetcode/53-max-sub-array.ts)

@@ -7,7 +7,7 @@ export default defineConfig({
   test: {
     //includeSource: ["src/**/*.ts"],
     coverage: {
-      reporter: ["text"],
+      reporter: ["text", "html-spa"],
     },
   },
 });
