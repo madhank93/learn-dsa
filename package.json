@@ -8,7 +8,8 @@
   },
   "scripts": {
     "gen-dir": "rm DIRECTORY.md && ts-node ./utils/generate-dir-struct.ts",
-    "test": "vitest --coverage"
+    "test": "vitest",
+    "coverage": "vitest --coverage"
   },
   "repository": {
     "type": "git",
