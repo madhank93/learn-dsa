@@ -1,4 +1,3 @@
-//TODO: Need to add tests
 class SingleNode {
   public value: number;
   public next?: SingleNode | null;
@@ -9,7 +8,7 @@ class SingleNode {
   }
 }
 
-class SingleLinkedList {
+export default class SingleLinkedList {
   public head?: SingleNode | null;
   public tail?: SingleNode | null;
 
@@ -18,7 +17,7 @@ class SingleLinkedList {
     this.tail = null;
   }
 
-  public addToFront(value: number) {
+  public addToBack(value: number) {
     const newNode = new SingleNode(value);
 
     if (this.head == null) {
@@ -30,6 +29,27 @@ class SingleLinkedList {
     }
   }
 
+  public remove(value: number) {
+    let prev = this.head;
+    for (
+      let searchNode = this.head;
+      searchNode != null;
+      searchNode = searchNode.next
+    ) {
+      if (searchNode.value === value) {
+        // Node to be deleted is Head
+        if (searchNode === this.head) this.head = this.head.next;
+        // Node to be deleted is Tail
+        if (searchNode === this.tail) this.tail = prev;
+        // Delete Non-Head node
+        prev!.next = searchNode.next;
+        return true;
+      }
+      prev = searchNode;
+    }
+    return false;
+  }
+
   public insertAfter(searchValue: number, insertValue: number) {
     for (
       let searchNode = this.head;
@@ -38,7 +58,7 @@ class SingleLinkedList {
     ) {
       if (searchNode.value === searchValue) {
         if (searchNode === this.tail) {
-          this.addToFront(insertValue);
+          this.addToBack(insertValue);
         } else {
           const newNode = new SingleNode(insertValue);
           newNode.next = searchNode.next;
@@ -56,14 +76,3 @@ class SingleLinkedList {
     }
   }
 }
-
-let test = new SingleLinkedList();
-
-test.addToFront(5);
-test.addToFront(7);
-test.addToFront(9);
-
-test.insertAfter(9, 10);
-test.addToFront(15);
-
-test.printForward();

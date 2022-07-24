@@ -16,9 +16,15 @@
 
 - [DSA implemented in JS](https://github.com/trekhleb/javascript-algorithms)
 
-- [Algorithm Visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
-
 - [Grokking coding interview](https://github.com/Chanda-Abdul/Grokking-the-Coding-Interview-Patterns)
+
+### Visualizer
+
+- [Algorithm Visualizer](https://algorithm-visualizer.org/)
+
+- [Visual Algo - NUS](https://visualgo.net/en)
+
+- [Data Structure Visualizations - USFCA](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
 ### List of solved problems
 
