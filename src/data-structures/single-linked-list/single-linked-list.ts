@@ -17,7 +17,7 @@ export default class SingleLinkedList {
     this.tail = null;
   }
 
-  public addToBack(value: number) {
+  public append(value: number) {
     const newNode = new SingleNode(value);
 
     if (this.head == null) {
@@ -50,7 +50,7 @@ export default class SingleLinkedList {
     return false;
   }
 
-  public insertAfter(searchValue: number, insertValue: number) {
+  public prepend(searchValue: number, insertValue: number) {
     for (
       let searchNode = this.head;
       searchNode != null;
@@ -58,7 +58,7 @@ export default class SingleLinkedList {
     ) {
       if (searchNode.value === searchValue) {
         if (searchNode === this.tail) {
-          this.addToBack(insertValue);
+          this.append(insertValue);
         } else {
           const newNode = new SingleNode(insertValue);
           newNode.next = searchNode.next;
@@ -68,6 +68,16 @@ export default class SingleLinkedList {
       }
     }
     return false;
+  }
+
+  public get(index: number) {
+    let length = 0;
+    for (let current = this.head; current != null; current = current.next) {
+      if (length === index) {
+        return current.value;
+      }
+      length++;
+    }
   }
 
   public printForward() {
