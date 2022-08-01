@@ -37,10 +37,13 @@ export default class SingleLinkedList {
       searchNode = searchNode.next
     ) {
       if (searchNode.value === value) {
+        // Node to be deleted is Head and Tail
+        if (searchNode === this.head && searchNode === this.tail)
+          this.head = this.tail = null;
         // Node to be deleted is Head
-        if (searchNode === this.head) this.head = this.head.next;
+        else if (searchNode === this.head) this.head = this.head.next;
         // Node to be deleted is Tail
-        if (searchNode === this.tail) this.tail = prev;
+        else if (searchNode === this.tail) this.tail = prev;
         // Delete Non-Head node
         prev!.next = searchNode.next;
         return true;
@@ -50,7 +53,7 @@ export default class SingleLinkedList {
     return false;
   }
 
-  public prepend(searchValue: number, insertValue: number) {
+  public insert(searchValue: number, insertValue: number) {
     for (
       let searchNode = this.head;
       searchNode != null;

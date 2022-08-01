@@ -68,11 +68,20 @@ describe("Single linked list test", () => {
     expect(sll.tail?.value).toBe(8);
   });
 
+  it("#remove, Remove single node from the list", () => {
+    let sll = new SingleLinkedList();
+    sll.append(5);
+    sll.remove(5);
+
+    expect(sll.head).toBeNull();
+    expect(sll.tail).toBeNull();
+  });
+
   it("#insertAfter, Insert a node in the middle after the search node", () => {
     let sll = new SingleLinkedList();
     sll.append(10);
     sll.append(12);
-    sll.prepend(10, 11);
+    sll.insert(10, 11);
 
     expect(sll.head?.next?.value).toBe(11);
   });
@@ -81,7 +90,7 @@ describe("Single linked list test", () => {
     let sll = new SingleLinkedList();
     sll.append(10);
     sll.append(20);
-    sll.prepend(20, 30);
+    sll.insert(20, 30);
 
     expect(sll.tail?.value).toBe(30);
   });
@@ -91,7 +100,7 @@ describe("Single linked list test", () => {
     sll.append(10);
     sll.append(20);
 
-    expect(sll.prepend(20, 30)).toBeTruthy();
+    expect(sll.insert(20, 30)).toBeTruthy();
   });
 
   it("#insertAfter, Should return false if a node is not found", () => {
@@ -99,7 +108,7 @@ describe("Single linked list test", () => {
     sll.append(10);
     sll.append(20);
 
-    expect(sll.prepend(99, 30)).toBeFalsy();
+    expect(sll.insert(99, 30)).toBeFalsy();
   });
 
   it("#get, Access list the by index", () => {
