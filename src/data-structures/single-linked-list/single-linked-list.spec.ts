@@ -128,4 +128,52 @@ describe("Single linked list test", () => {
     expect(sll.get(2)).toBeUndefined();
     expect(sll.get(-1)).toBeUndefined();
   });
+
+  it("#push, Push a node into the list", () => {
+    let sll = new SingleLinkedList();
+    sll.append(10);
+    sll.append(20);
+    sll.push(30);
+
+    expect(sll.tail?.value).toBe(30);
+  });
+
+  it("#push, Push a node into the empty list", () => {
+    let sll = new SingleLinkedList();
+    sll.push(10);
+    sll.push(20);
+    sll.push(30);
+
+    expect(sll.tail?.value).toBe(30);
+  });
+
+  it("#push, Add a node into the list using append, push and insert", () => {
+    let sll = new SingleLinkedList();
+    sll.append(10);
+    sll.push(20);
+    sll.insert(20, 30);
+
+    expect(sll.head?.value).toBe(10);
+    expect(sll.tail?.value).toBe(30);
+  });
+
+  it("#pop, Remove a last item from the list", () => {
+    let sll = new SingleLinkedList();
+    sll.append(10);
+    sll.append(20);
+    sll.pop();
+
+    expect(sll.tail?.value).toBe(10);
+
+    sll.push(20);
+    sll.pop();
+
+    expect(sll.tail?.value).toBe(10);
+  });
+
+  it("#pop, Remove a node from the empty list", () => {
+    let sll = new SingleLinkedList();
+
+    expect(sll.pop()).toBeUndefined();
+  });
 });

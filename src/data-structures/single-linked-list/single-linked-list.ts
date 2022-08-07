@@ -37,14 +37,11 @@ export default class SingleLinkedList {
       searchNode = searchNode.next
     ) {
       if (searchNode.value === value) {
-        // Node to be deleted is Head and Tail
         if (searchNode === this.head && searchNode === this.tail)
           this.head = this.tail = null;
-        // Node to be deleted is Head
         else if (searchNode === this.head) this.head = this.head.next;
-        // Node to be deleted is Tail
         else if (searchNode === this.tail) this.tail = prev;
-        // Delete Non-Head node
+
         prev!.next = searchNode.next;
         return true;
       }
@@ -80,6 +77,24 @@ export default class SingleLinkedList {
         return current.value;
       }
       length++;
+    }
+  }
+
+  public push(value: number) {
+    const newNode = new SingleNode(value);
+    if (this.tail != null) {
+      this.tail!.next = newNode;
+      this.tail = newNode;
+    } else {
+      this.append(value);
+    }
+  }
+
+  public pop() {
+    if (this.tail === null) {
+      return undefined;
+    } else {
+      this.remove(this.tail!.value);
     }
   }
 
