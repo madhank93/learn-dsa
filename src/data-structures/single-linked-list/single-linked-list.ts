@@ -98,6 +98,18 @@ export default class SingleLinkedList {
     }
   }
 
+  public reverse() {
+    this.tail = this.head;
+    let prevNode, tmp;
+    while (this.head != null) {
+      tmp = this.head.next;
+      this.head.next = prevNode;
+      prevNode = this.head;
+      this.head = tmp;
+    }
+    this.head = prevNode;
+  }
+
   public printForward() {
     for (let current = this.head; current != null; current = current!.next) {
       console.log(current.value);
