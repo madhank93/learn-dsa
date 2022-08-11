@@ -77,6 +77,11 @@ describe("Single linked list test", () => {
     expect(sll.tail).toBeNull();
   });
 
+  it("#remove, Remove node from an empty list", () => {
+    let sll = new SingleLinkedList();
+    expect(() => sll.remove(5)).toThrowError("Single linked list is empty");
+  });
+
   it("#insertAfter, Insert a node in the middle after the search node", () => {
     let sll = new SingleLinkedList();
     sll.append(10);
@@ -109,6 +114,11 @@ describe("Single linked list test", () => {
     sll.append(20);
 
     expect(sll.insert(99, 30)).toBeFalsy();
+  });
+
+  it("#insertAfter, Insert node into an empty list", () => {
+    let sll = new SingleLinkedList();
+    expect(() => sll.insert(5, 10)).toThrowError("Single linked list is empty");
   });
 
   it("#get, Access list the by index", () => {
@@ -175,5 +185,21 @@ describe("Single linked list test", () => {
     let sll = new SingleLinkedList();
 
     expect(sll.pop()).toBeUndefined();
+  });
+
+  it("#reverse, Reverse a singly linked list", () => {
+    let sll = new SingleLinkedList();
+
+    sll.append(1);
+    sll.append(2);
+    sll.append(3);
+    sll.append(4);
+    sll.append(5);
+    sll.reverse();
+
+    expect(sll.head?.value).toBe(5);
+    expect(sll.head?.next!.value).toBe(4);
+
+    expect(sll.tail?.value).toBe(1);
   });
 });
