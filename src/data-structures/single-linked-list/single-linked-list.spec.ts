@@ -201,5 +201,6 @@ describe("Single linked list test", () => {
     expect(sll.head?.next!.value).toBe(4);
 
     expect(sll.tail?.value).toBe(1);
+    expect(sll.tail?.next).toBeNull();
   });
 });

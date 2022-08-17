@@ -106,14 +106,15 @@ export default class SingleLinkedList {
     if (this.head === null) throw new Error("Single linked list is empty");
 
     this.tail = this.head;
-    let prevNode, tmp;
+    let tmp1 = null,
+      tmp2 = null;
     while (this.head != null) {
-      tmp = this.head.next;
-      this.head.next = prevNode;
-      prevNode = this.head;
-      this.head = tmp;
+      tmp2 = this.head.next;
+      this.head.next = tmp1;
+      tmp1 = this.head;
+      this.head = tmp2;
     }
-    this.head = prevNode;
+    this.head = tmp1;
   }
 
   public printForward() {
