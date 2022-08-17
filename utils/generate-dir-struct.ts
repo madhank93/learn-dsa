@@ -24,17 +24,25 @@ async function getParseDirectoryStructure() {
   return parsedDirStructure.children;
 }
 
-function getFilesAndDir(dirFile: (parser.DirInfo | parser.FileInfo)[]) {
+function getFilesAndDir(
+  dirFile: (parser.DirInfo | parser.FileInfo)[],
+  folderCount: number
+) {
   dirFile.forEach((value) => {
     if (value.type === "directory") {
-      let output = `### ${value.name}\n`;
+      folderCount++;
+      let output = `\n ├──${"──".repeat(folderCount)}📂 ${value.name}\n`;
       writeToFile(output);
-      getFilesAndDir(value.children);
+      getFilesAndDir(value.children, folderCount);
+      folderCount--;
     } else if (
       value.type === "file" &&
       (value.ext === ".ts" || value.ext === ".md")
     ) {
-      let output = `\n - [${value.name}](${value.path})\n`;
+      let output = `\n ├──${"──".repeat(folderCount + 2)}📜 [${value.name}](${
+        value.path
+      })\n`;
+
       writeToFile(output);
     }
   });
@@ -46,5 +54,5 @@ function writeToFile(output: string) {
 
 (async () => {
   const parsedDirectoryStruct = await getParseDirectoryStructure();
-  getFilesAndDir(parsedDirectoryStruct);
+  getFilesAndDir(parsedDirectoryStruct, 1);
 })();
