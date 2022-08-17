@@ -17,7 +17,7 @@ export default class SingleLinkedList {
     this.tail = null;
   }
 
-  public addToBack(value: number) {
+  public append(value: number) {
     const newNode = new SingleNode(value);
 
     if (this.head == null) {
@@ -30,18 +30,20 @@ export default class SingleLinkedList {
   }
 
   public remove(value: number) {
+    if (this.head === null) throw new Error("Single linked list is empty");
+
     let prev = this.head;
     for (
-      let searchNode = this.head;
+      let searchNode: SingleNode | null | undefined = this.head;
       searchNode != null;
       searchNode = searchNode.next
     ) {
       if (searchNode.value === value) {
-        // Node to be deleted is Head
-        if (searchNode === this.head) this.head = this.head.next;
-        // Node to be deleted is Tail
-        if (searchNode === this.tail) this.tail = prev;
-        // Delete Non-Head node
+        if (searchNode === this.head && searchNode === this.tail)
+          this.head = this.tail = null;
+        else if (searchNode === this.head) this.head = this.head.next;
+        else if (searchNode === this.tail) this.tail = prev;
+
         prev!.next = searchNode.next;
         return true;
       }
@@ -50,15 +52,17 @@ export default class SingleLinkedList {
     return false;
   }
 
-  public insertAfter(searchValue: number, insertValue: number) {
+  public insert(searchValue: number, insertValue: number) {
+    if (this.head === null) throw new Error("Single linked list is empty");
+
     for (
-      let searchNode = this.head;
+      let searchNode: SingleNode | null | undefined = this.head;
       searchNode != null;
       searchNode = searchNode.next
     ) {
       if (searchNode.value === searchValue) {
         if (searchNode === this.tail) {
-          this.addToBack(insertValue);
+          this.append(insertValue);
         } else {
           const newNode = new SingleNode(insertValue);
           newNode.next = searchNode.next;
@@ -68,6 +72,49 @@ export default class SingleLinkedList {
       }
     }
     return false;
+  }
+
+  public get(index: number) {
+    let length = 0;
+    for (let current = this.head; current != null; current = current.next) {
+      if (length === index) {
+        return current.value;
+      }
+      length++;
+    }
+  }
+
+  public push(value: number) {
+    const newNode = new SingleNode(value);
+    if (this.tail != null) {
+      this.tail!.next = newNode;
+      this.tail = newNode;
+    } else {
+      this.append(value);
+    }
+  }
+
+  public pop() {
+    if (this.tail === null) {
+      return undefined;
+    } else {
+      this.remove(this.tail!.value);
+    }
+  }
+
+  public reverse() {
+    if (this.head === null) throw new Error("Single linked list is empty");
+
+    this.tail = this.head;
+    let tmp1 = null,
+      tmp2 = null;
+    while (this.head != null) {
+      tmp2 = this.head.next;
+      this.head.next = tmp1;
+      tmp1 = this.head;
+      this.head = tmp2;
+    }
+    this.head = tmp1;
   }
 
   public printForward() {
