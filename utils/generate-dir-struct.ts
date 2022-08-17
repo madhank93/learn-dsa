@@ -28,20 +28,18 @@ function getFilesAndDir(
   dirFile: (parser.DirInfo | parser.FileInfo)[],
   folderCount: number
 ) {
-  let count = folderCount;
   dirFile.forEach((value) => {
-    console.log(count, value.name);
     if (value.type === "directory") {
-      count++;
-      let output = `\n ├──${"──".repeat(count)}⚫ ${value.name}\n`;
+      folderCount++;
+      let output = `\n ├──${"──".repeat(folderCount)}📂 ${value.name}\n`;
       writeToFile(output);
-      getFilesAndDir(value.children, count);
-      count = count - 1;
+      getFilesAndDir(value.children, folderCount);
+      folderCount--;
     } else if (
       value.type === "file" &&
       (value.ext === ".ts" || value.ext === ".md")
     ) {
-      let output = `\n ├──${"──".repeat(count)}➢ ➣ ➤ [${value.name}](${
+      let output = `\n ├──${"──".repeat(folderCount + 2)}📜 [${value.name}](${
         value.path
       })\n`;
 
