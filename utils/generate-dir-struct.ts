@@ -33,7 +33,7 @@ function getFilesAndDir(
     console.log(count, value.name);
     if (value.type === "directory") {
       count++;
-      let output = `\n ├──${"──".repeat(count)}⚫ ${value.name}`;
+      let output = `\n ├──${"──".repeat(count)}⚫ ${value.name}\n`;
       writeToFile(output);
       getFilesAndDir(value.children, count);
       count = count - 1;
@@ -41,7 +41,6 @@ function getFilesAndDir(
       value.type === "file" &&
       (value.ext === ".ts" || value.ext === ".md")
     ) {
-      //let output = `\n - [${value.name}](${value.path})\n`;
       let output = `\n ├──${"──".repeat(count)}➢ ➣ ➤ [${value.name}](${
         value.path
       })\n`;
