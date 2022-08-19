@@ -19,7 +19,7 @@ export default class DoublyLinkedList {
     this.tail = null;
   }
 
-  public addToBack(value: number) {
+  public append(value: number) {
     const newNode = new DoublyNode(value);
 
     if (this.head == null) {
@@ -32,7 +32,7 @@ export default class DoublyLinkedList {
     }
   }
 
-  public addToFront(value: number) {
+  public prepend(value: number) {
     const newNode = new DoublyNode(value);
 
     if (this.head == null) {
@@ -77,6 +77,30 @@ export default class DoublyLinkedList {
     }
   }
 
+  public remove(value: number) {
+    for (
+      let searchNode = this.head;
+      searchNode != null;
+      searchNode = searchNode.next
+    ) {
+      if (searchNode.value === value) {
+        if (searchNode === this.head && searchNode === this.tail) {
+          this.head = null;
+          this.tail = null;
+        } else if (searchNode === this.head) {
+          this.head = this.head.next;
+          this.head!.previous = null;
+        } else if (searchNode === this.tail) {
+          this.tail = this.tail.previous;
+          this.tail!.next = null;
+        }
+
+        searchNode.previous!.next = searchNode.next;
+        searchNode.next!.previous = searchNode.previous;
+      }
+    }
+  }
+
   public printForward() {
     for (let current = this.head; current != null; current = current!.next) {
       console.log(current.value);
@@ -93,6 +117,17 @@ export default class DoublyLinkedList {
     }
   }
 }
+
+let dll = new DoublyLinkedList();
+
+dll.append(1);
+dll.append(2);
+dll.append(3);
+dll.append(4);
+dll.append(5);
+
+dll.remove(3);
+dll.printForward();
 
 // let dll = new DoubleLinkedList();
 
