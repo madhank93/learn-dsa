@@ -1,7 +1,7 @@
-class DoubleNode {
-  public previous: DoubleNode | null;
+class DoublyNode {
+  public previous: DoublyNode | null;
   public value: number;
-  public next: DoubleNode | null;
+  public next: DoublyNode | null;
 
   constructor(value: number) {
     this.previous = null;
@@ -10,9 +10,9 @@ class DoubleNode {
   }
 }
 
-class DoubleLinkedList {
-  public head: DoubleNode | null;
-  public tail: DoubleNode | null;
+export default class DoublyLinkedList {
+  public head: DoublyNode | null;
+  public tail: DoublyNode | null;
 
   constructor() {
     this.head = null;
@@ -20,7 +20,7 @@ class DoubleLinkedList {
   }
 
   public addToBack(value: number) {
-    const newNode = new DoubleNode(value);
+    const newNode = new DoublyNode(value);
 
     if (this.head == null) {
       this.head = newNode;
@@ -33,7 +33,7 @@ class DoubleLinkedList {
   }
 
   public addToFront(value: number) {
-    const newNode = new DoubleNode(value);
+    const newNode = new DoublyNode(value);
 
     if (this.head == null) {
       this.head = newNode;
@@ -52,7 +52,7 @@ class DoubleLinkedList {
       searchNode = searchNode.next
     ) {
       if (searchNode.value === searchValue) {
-        const newNode = new DoubleNode(insertValue);
+        const newNode = new DoublyNode(insertValue);
 
         newNode.next = searchNode;
         newNode.previous = searchNode.previous;
@@ -69,7 +69,7 @@ class DoubleLinkedList {
       searchNode = searchNode.next
     ) {
       if (searchNode.value === searchValue) {
-        const newNode = new DoubleNode(insertValue);
+        const newNode = new DoublyNode(insertValue);
 
         newNode.previous = searchNode.next;
         newNode.next = searchNode.next!.previous;
@@ -94,17 +94,17 @@ class DoubleLinkedList {
   }
 }
 
-let dll = new DoubleLinkedList();
+// let dll = new DoubleLinkedList();
 
-dll.addToBack(5);
-dll.addToBack(7);
+// dll.addToBack(5);
+// dll.addToBack(7);
 // dll.addToBack(10);
 // dll.addToBack(56);
 // dll.addToFront(1);
 // dll.addToFront(0);
 //dll.removeNode(6); k
-dll.insertBefore(7, 6);
-dll.addToBack(8);
-console.log("Tail value: ", dll.tail!.value);
+// dll.insertBefore(7, 6);
+// dll.addToBack(8);
+// console.log("Tail value: ", dll.tail!.value);
 
-dll.printForward();
+// dll.printForward();

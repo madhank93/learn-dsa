@@ -1,7 +1,7 @@
-class SentinelNode {
-  public previous: SentinelNode | null;
+class SentinelDoublyLinkedNode {
+  public previous: SentinelDoublyLinkedNode | null;
   public value: number | undefined;
-  public next: SentinelNode | null;
+  public next: SentinelDoublyLinkedNode | null;
 
   constructor(value?: number) {
     this.previous = null;
@@ -10,20 +10,20 @@ class SentinelNode {
   }
 }
 
-class SentinelList {
-  public head: SentinelNode | null;
-  public tail: SentinelNode | null;
+class SentinelDoublyLinkedList {
+  public head: SentinelDoublyLinkedNode | null;
+  public tail: SentinelDoublyLinkedNode | null;
 
   constructor(value: number) {
-    this.head = new SentinelNode();
-    this.tail = new SentinelNode();
+    this.head = new SentinelDoublyLinkedNode();
+    this.tail = new SentinelDoublyLinkedNode();
     this.head.next = this.tail;
     this.tail.previous = this.head;
     this.insertNode(this.tail.previous, value);
   }
 
-  private insertNode(node: SentinelNode | null, value: number) {
-    const newNode = new SentinelNode(value);
+  private insertNode(node: SentinelDoublyLinkedNode | null, value: number) {
+    const newNode = new SentinelDoublyLinkedNode(value);
 
     newNode.previous = node;
     newNode.next = node!.next;
@@ -45,7 +45,7 @@ class SentinelList {
       console.log(current!.value);
   }
 
-  private removeFromNode(deleteValue: SentinelNode | null) {}
+  private removeFromNode(deleteValue: SentinelDoublyLinkedNode | null) {}
 
   public removeNode(deleteValue: number) {
     for (
@@ -60,7 +60,7 @@ class SentinelList {
   }
 }
 
-const sll = new SentinelList(5);
+const sll = new SentinelDoublyLinkedList(5);
 sll.addToBack(6);
 sll.addToBack(7);
 sll.addToBack(8);

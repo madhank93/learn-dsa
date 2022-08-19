@@ -31,7 +31,7 @@ function getFilesAndDir(
   dirFile.forEach((value) => {
     if (value.type === "directory") {
       folderCount++;
-      let output = `\n ├──${"──".repeat(folderCount)}📂 ${value.name}\n`;
+      let output = `\n ├${"─".repeat(folderCount)}📂 ${value.name}\n`;
       writeToFile(output);
       getFilesAndDir(value.children, folderCount);
       folderCount--;
@@ -39,9 +39,13 @@ function getFilesAndDir(
       value.type === "file" &&
       (value.ext === ".ts" || value.ext === ".md")
     ) {
-      let output = `\n ├──${"──".repeat(folderCount + 2)}📜 [${value.name}](${
-        value.path
-      })\n`;
+      let output = `\n ├${"─".repeat(folderCount + 2)}${
+        value.name.includes("spec")
+          ? "🧪"
+          : value.name.includes("Readme")
+          ? "📖"
+          : "📜"
+      } [${value.name}](${value.path})\n`;
 
       writeToFile(output);
     }

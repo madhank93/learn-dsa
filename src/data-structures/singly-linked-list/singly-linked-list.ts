@@ -1,6 +1,6 @@
-class SingleNode {
+class SinglyNode {
   public value: number;
-  public next?: SingleNode | null;
+  public next?: SinglyNode | null;
 
   constructor(value: number) {
     this.value = value;
@@ -8,9 +8,9 @@ class SingleNode {
   }
 }
 
-export default class SingleLinkedList {
-  public head?: SingleNode | null;
-  public tail?: SingleNode | null;
+export default class SinglyLinkedList {
+  public head?: SinglyNode | null;
+  public tail?: SinglyNode | null;
 
   constructor() {
     this.head = null;
@@ -18,7 +18,7 @@ export default class SingleLinkedList {
   }
 
   public append(value: number) {
-    const newNode = new SingleNode(value);
+    const newNode = new SinglyNode(value);
 
     if (this.head == null) {
       this.head = newNode;
@@ -34,7 +34,7 @@ export default class SingleLinkedList {
 
     let prev = this.head;
     for (
-      let searchNode: SingleNode | null | undefined = this.head;
+      let searchNode: SinglyNode | null | undefined = this.head;
       searchNode != null;
       searchNode = searchNode.next
     ) {
@@ -56,7 +56,7 @@ export default class SingleLinkedList {
     if (this.head === null) throw new Error("Single linked list is empty");
 
     for (
-      let searchNode: SingleNode | null | undefined = this.head;
+      let searchNode: SinglyNode | null | undefined = this.head;
       searchNode != null;
       searchNode = searchNode.next
     ) {
@@ -64,7 +64,7 @@ export default class SingleLinkedList {
         if (searchNode === this.tail) {
           this.append(insertValue);
         } else {
-          const newNode = new SingleNode(insertValue);
+          const newNode = new SinglyNode(insertValue);
           newNode.next = searchNode.next;
           searchNode.next = newNode;
         }
@@ -85,7 +85,7 @@ export default class SingleLinkedList {
   }
 
   public push(value: number) {
-    const newNode = new SingleNode(value);
+    const newNode = new SinglyNode(value);
     if (this.tail != null) {
       this.tail!.next = newNode;
       this.tail = newNode;
