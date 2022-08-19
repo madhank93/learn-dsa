@@ -39,10 +39,16 @@ export default class SinglyLinkedList {
       searchNode = searchNode.next
     ) {
       if (searchNode.value === value) {
-        if (searchNode === this.head && searchNode === this.tail)
+        if (searchNode === this.head && searchNode === this.tail) {
           this.head = this.tail = null;
-        else if (searchNode === this.head) this.head = this.head.next;
-        else if (searchNode === this.tail) this.tail = prev;
+          return true;
+        } else if (searchNode === this.head) {
+          this.head = this.head.next;
+          return true;
+        } else if (searchNode === this.tail) {
+          this.tail = prev;
+          return true;
+        }
 
         prev!.next = searchNode.next;
         return true;
