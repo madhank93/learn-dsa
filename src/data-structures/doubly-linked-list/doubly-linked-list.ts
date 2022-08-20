@@ -117,29 +117,3 @@ export default class DoublyLinkedList {
     }
   }
 }
-
-let dll = new DoublyLinkedList();
-
-dll.append(1);
-dll.append(2);
-dll.append(3);
-dll.append(4);
-dll.append(5);
-
-dll.remove(3);
-dll.printForward();
-
-// let dll = new DoubleLinkedList();
-
-// dll.addToBack(5);
-// dll.addToBack(7);
-// dll.addToBack(10);
-// dll.addToBack(56);
-// dll.addToFront(1);
-// dll.addToFront(0);
-//dll.removeNode(6); k
-// dll.insertBefore(7, 6);
-// dll.addToBack(8);
-// console.log("Tail value: ", dll.tail!.value);
-
-// dll.printForward();
