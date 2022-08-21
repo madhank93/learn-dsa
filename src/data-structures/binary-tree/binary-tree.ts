@@ -43,8 +43,8 @@ class BinaryTree<T> {
     else {
       console.log("inside");
       if (node.right === null && node.left === null) return null;
-      else if (node.left != null && node.right === null) return node.left;
-      else if (node.left === null && node.right != null) return node.right;
+      else if (node.left !== null && node.right === null) return node.left;
+      else if (node.left === null && node.right !== null) return node.right;
       else {
         let successor = node.right;
         while (successor!.left === null) successor = successor!.left;
@@ -62,7 +62,7 @@ class BinaryTree<T> {
   }
 
   public printTree(current: BinaryNode<T> | null) {
-    if (current != null) {
+    if (current !== null) {
       this.level = this.level + 1;
       this.printTree(current.right);
       const indent = " ".repeat(this.level);

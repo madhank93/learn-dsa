@@ -39,7 +39,7 @@ class SentinelDoublyLinkedList {
   public printForward() {
     for (
       let current = this.head!.next;
-      current != this.tail;
+      current !== this.tail;
       current = this.head!.next
     )
       console.log(current!.value);
@@ -50,7 +50,7 @@ class SentinelDoublyLinkedList {
   public removeNode(deleteValue: number) {
     for (
       let remove = this.head!.next;
-      remove != this.tail;
+      remove !== this.tail;
       remove = this.head!.next
     ) {
       if (remove!.value === deleteValue) {

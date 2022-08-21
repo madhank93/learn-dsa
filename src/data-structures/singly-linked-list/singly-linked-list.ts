@@ -35,22 +35,22 @@ export default class SinglyLinkedList {
     let prev = this.head;
     for (
       let searchNode: SinglyNode | null | undefined = this.head;
-      searchNode != null;
-      searchNode = searchNode.next
+      searchNode !== null;
+      searchNode = searchNode!.next
     ) {
-      if (searchNode.value === value) {
+      if (searchNode!.value === value) {
         if (searchNode === this.head && searchNode === this.tail) {
           this.head = this.tail = null;
           return true;
         } else if (searchNode === this.head) {
-          this.head = this.head.next;
+          this.head = this.head!.next;
           return true;
         } else if (searchNode === this.tail) {
           this.tail = prev;
           return true;
         }
 
-        prev!.next = searchNode.next;
+        prev!.next = searchNode!.next;
         return true;
       }
       prev = searchNode;
@@ -63,16 +63,16 @@ export default class SinglyLinkedList {
 
     for (
       let searchNode: SinglyNode | null | undefined = this.head;
-      searchNode != null;
-      searchNode = searchNode.next
+      searchNode !== null;
+      searchNode = searchNode!.next
     ) {
-      if (searchNode.value === searchValue) {
+      if (searchNode!.value === searchValue) {
         if (searchNode === this.tail) {
           this.append(insertValue);
         } else {
           const newNode = new SinglyNode(insertValue);
-          newNode.next = searchNode.next;
-          searchNode.next = newNode;
+          newNode.next = searchNode!.next;
+          searchNode!.next = newNode;
         }
         return true;
       }
@@ -82,9 +82,9 @@ export default class SinglyLinkedList {
 
   public get(index: number) {
     let length = 0;
-    for (let current = this.head; current != null; current = current.next) {
+    for (let current = this.head; current !== null; current = current!.next) {
       if (length === index) {
-        return current.value;
+        return current!.value;
       }
       length++;
     }
@@ -92,7 +92,7 @@ export default class SinglyLinkedList {
 
   public push(value: number) {
     const newNode = new SinglyNode(value);
-    if (this.tail != null) {
+    if (this.tail !== null) {
       this.tail!.next = newNode;
       this.tail = newNode;
     } else {
@@ -114,9 +114,9 @@ export default class SinglyLinkedList {
     this.tail = this.head;
     let tmp1 = null,
       tmp2 = null;
-    while (this.head != null) {
-      tmp2 = this.head.next;
-      this.head.next = tmp1;
+    while (this.head !== null) {
+      tmp2 = this.head!.next;
+      this.head!.next = tmp1;
       tmp1 = this.head;
       this.head = tmp2;
     }
@@ -124,8 +124,8 @@ export default class SinglyLinkedList {
   }
 
   public printForward() {
-    for (let current = this.head; current != null; current = current!.next) {
-      console.log(current.value);
+    for (let current = this.head; current !== null; current = current!.next) {
+      console.log(current!.value);
     }
   }
 }

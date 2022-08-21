@@ -27,7 +27,7 @@ class HashTable {
     const index = this.hash(key);
     for (
       let current: Entry | null = this.table[index];
-      current != null;
+      current !== null;
       current = current.nextEntry
     ) {
       // If key exists update the value
@@ -62,7 +62,7 @@ class HashTable {
     for (let index = 0; index < this.size; index++) {
       for (
         let current: Entry | null = this.table[index];
-        current != null;
+        current !== null;
         current = current.nextEntry
       ) {
         keys.push(current.key);
@@ -88,7 +88,7 @@ class HashTable {
     for (let offset = 0; offset < this.size; offset++) {
       for (
         let current: Entry | null = this.table[offset];
-        current != null;
+        current !== null;
         current = current!.nextEntry
       ) {
         console.log(`${current.key} : ${current.value}`);

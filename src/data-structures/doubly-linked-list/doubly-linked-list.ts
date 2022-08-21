@@ -48,7 +48,7 @@ export default class DoublyLinkedList {
   public insertBefore(searchValue: number, insertValue: number) {
     for (
       let searchNode = this.head;
-      searchNode != null;
+      searchNode !== null;
       searchNode = searchNode.next
     ) {
       if (searchNode.value === searchValue) {
@@ -65,7 +65,7 @@ export default class DoublyLinkedList {
   public insertAfter(searchValue: number, insertValue: number) {
     for (
       let searchNode = this.head;
-      searchNode != null;
+      searchNode !== null;
       searchNode = searchNode.next
     ) {
       if (searchNode.value === searchValue) {
@@ -80,7 +80,7 @@ export default class DoublyLinkedList {
   public remove(value: number) {
     for (
       let searchNode = this.head;
-      searchNode != null;
+      searchNode !== null;
       searchNode = searchNode.next
     ) {
       if (searchNode.value === value) {
@@ -102,7 +102,7 @@ export default class DoublyLinkedList {
   }
 
   public printForward() {
-    for (let current = this.head; current != null; current = current!.next) {
+    for (let current = this.head; current !== null; current = current!.next) {
       console.log(current.value);
     }
   }
@@ -110,7 +110,7 @@ export default class DoublyLinkedList {
   public printBackward() {
     for (
       let current = this.tail;
-      current != null;
+      current !== null;
       current = current!.previous
     ) {
       console.log(current.value);

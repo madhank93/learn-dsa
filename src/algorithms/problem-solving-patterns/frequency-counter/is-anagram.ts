@@ -9,7 +9,7 @@ function isAnagram(str1: string, str2: string): boolean {
   let occurrence1: Record<string, number> = {};
   let occurrence2: Record<string, number> = {};
 
-  if (str1.length != str2.length) return false;
+  if (str1.length !== str2.length) return false;
 
   for (let element of str1) {
     occurrence1[element] = (occurrence1[element] || 0) + 1;
@@ -23,7 +23,7 @@ function isAnagram(str1: string, str2: string): boolean {
     if (!(key in occurrence2)) {
       return false;
     }
-    if (occurrence1[key] != occurrence2[key]) {
+    if (occurrence1[key] !== occurrence2[key]) {
       return false;
     }
   }
