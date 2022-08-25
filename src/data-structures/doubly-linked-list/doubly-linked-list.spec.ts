@@ -27,4 +27,30 @@ describe("Doubly linked list test", () => {
     expect(dll.tail?.previous?.value).toBe(2);
     expect(dll.tail?.previous?.previous?.value).toBe(1);
   });
+
+  it("#prepend, Prepend a node to the list", () => {
+    const dll = new DoublyLinkedList();
+    dll.prepend(5);
+
+    expect(dll.head?.value).toBe(5);
+    expect(dll.tail?.value).toBe(5);
+    expect(dll.head?.previous).toBeNull();
+    expect(dll.head?.next).toBeNull();
+    expect(dll.tail?.previous).toBeNull();
+    expect(dll.tail?.next).toBeNull();
+  });
+
+  it("#prepend, Prepend more than two nodes to the list", () => {
+    const dll = new DoublyLinkedList();
+    dll.prepend(1);
+    dll.prepend(2);
+    dll.prepend(3);
+
+    expect(dll.head?.value).toBe(3);
+    expect(dll.head?.next?.value).toBe(2);
+    expect(dll.head?.next?.next?.value).toBe(1);
+    expect(dll.tail?.value).toBe(1);
+    expect(dll.tail?.previous?.value).toBe(2);
+    expect(dll.tail?.previous?.previous?.value).toBe(3);
+  });
 });
