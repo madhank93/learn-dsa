@@ -46,10 +46,11 @@ export default class DoublyLinkedList {
   }
 
   public insertBefore(searchValue: number, insertValue: number) {
+    if (this.head === null) throw new Error("Doubly linked list is empty");
     for (
-      let searchNode = this.head;
+      let searchNode: DoublyNode | null = this.head;
       searchNode !== null;
-      searchNode = searchNode.next
+      searchNode = searchNode!.next
     ) {
       if (searchNode.value === searchValue) {
         const newNode = new DoublyNode(insertValue);
@@ -58,8 +59,11 @@ export default class DoublyLinkedList {
         newNode.previous = searchNode.previous;
         searchNode.previous!.next = newNode;
         searchNode.previous = newNode;
+
+        return true;
       }
     }
+    return false;
   }
 
   public insertAfter(searchValue: number, insertValue: number) {

@@ -30,7 +30,7 @@ export default class SinglyLinkedList {
   }
 
   public remove(value: number) {
-    if (this.head === null) throw new Error("Single linked list is empty");
+    if (this.head === null) throw new Error("Singly linked list is empty");
 
     let prev = this.head;
     for (
@@ -59,7 +59,7 @@ export default class SinglyLinkedList {
   }
 
   public insert(searchValue: number, insertValue: number) {
-    if (this.head === null) throw new Error("Single linked list is empty");
+    if (this.head === null) throw new Error("Singly linked list is empty");
 
     for (
       let searchNode: SinglyNode | null | undefined = this.head;
@@ -109,7 +109,7 @@ export default class SinglyLinkedList {
   }
 
   public reverse() {
-    if (this.head === null) throw new Error("Single linked list is empty");
+    if (this.head === null) throw new Error("Singly linked list is empty");
 
     this.tail = this.head;
     let tmp1 = null,

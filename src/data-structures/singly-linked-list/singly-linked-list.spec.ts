@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import SinglyLinkedList from "./singly-linked-list";
 
 describe("Singly linked list test", () => {
-  it("#addToBack, Add single node to the list", () => {
+  it("#addToBack, Add Singly node to the list", () => {
     let sll = new SinglyLinkedList();
     sll.append(5);
 
@@ -68,7 +68,7 @@ describe("Singly linked list test", () => {
     expect(sll.tail?.value).toBe(8);
   });
 
-  it("#remove, Remove single node from the list", () => {
+  it("#remove, Remove Singly node from the list", () => {
     let sll = new SinglyLinkedList();
     sll.append(5);
     sll.remove(5);
@@ -79,7 +79,7 @@ describe("Singly linked list test", () => {
 
   it("#remove, Remove node from an empty list", () => {
     let sll = new SinglyLinkedList();
-    expect(() => sll.remove(5)).toThrowError("Single linked list is empty");
+    expect(() => sll.remove(5)).toThrowError("Singly linked list is empty");
   });
 
   it("#insertAfter, Insert a node in the middle after the search node", () => {
@@ -118,7 +118,7 @@ describe("Singly linked list test", () => {
 
   it("#insertAfter, Insert node into an empty list", () => {
     let sll = new SinglyLinkedList();
-    expect(() => sll.insert(5, 10)).toThrowError("Single linked list is empty");
+    expect(() => sll.insert(5, 10)).toThrowError("Singly linked list is empty");
   });
 
   it("#get, Access list the by index", () => {

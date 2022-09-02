@@ -53,4 +53,30 @@ describe("Doubly linked list test", () => {
     expect(dll.tail?.previous?.value).toBe(2);
     expect(dll.tail?.previous?.previous?.value).toBe(3);
   });
+
+  it("#insertBefore, Should return true if a node is found", () => {
+    const dll = new DoublyLinkedList();
+    dll.append(3);
+    dll.append(4);
+    dll.prepend(1);
+
+    expect(dll.insertBefore(3, 2)).toBeTruthy();
+  });
+
+  it("#insertBefore, Should return false if a node is not found", () => {
+    const dll = new DoublyLinkedList();
+    dll.append(3);
+    dll.append(4);
+    dll.prepend(1);
+
+    expect(dll.insertBefore(100, 2)).toBeFalsy();
+  });
+
+  it("#insertBefore, Should throw an error if node is empty", () => {
+    const dll = new DoublyLinkedList();
+
+    expect(() => dll.insertBefore(100, 2)).toThrowError(
+      "Doubly linked list is empty"
+    );
+  });
 });
