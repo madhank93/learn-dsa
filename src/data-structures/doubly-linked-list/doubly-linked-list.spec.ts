@@ -63,6 +63,17 @@ describe("Doubly linked list test", () => {
     expect(dll.insertBefore(3, 2)).toBeTruthy();
   });
 
+  it("#insertBefore, Insert a node before the search node", () => {
+    const dll = new DoublyLinkedList();
+    dll.append(3);
+    dll.append(4);
+    dll.prepend(1);
+    dll.insertBefore(3, 2);
+
+    expect(dll.head?.next?.value).toBe(2);
+    expect(dll.head?.next?.next?.value).toBe(3);
+  });
+
   it("#insertBefore, Should return false if a node is not found", () => {
     const dll = new DoublyLinkedList();
     dll.append(3);

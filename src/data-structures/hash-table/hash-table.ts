@@ -1,3 +1,4 @@
+// TODO: Add tests
 class Entry {
   public key: number;
   public value: string;

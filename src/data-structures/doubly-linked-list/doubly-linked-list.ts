@@ -1,3 +1,4 @@
+// TODO: Complete tests for remaining methods
 class DoublyNode {
   public previous: DoublyNode | null;
   public value: number;
@@ -67,8 +68,9 @@ export default class DoublyLinkedList {
   }
 
   public insertAfter(searchValue: number, insertValue: number) {
+    if (this.head === null) throw new Error("Doubly linked list is empty");
     for (
-      let searchNode = this.head;
+      let searchNode: DoublyNode | null = this.head;
       searchNode !== null;
       searchNode = searchNode.next
     ) {
@@ -77,8 +79,11 @@ export default class DoublyLinkedList {
 
         newNode.previous = searchNode.next;
         newNode.next = searchNode.next!.previous;
+
+        return true;
       }
     }
+    return false;
   }
 
   public remove(value: number) {
