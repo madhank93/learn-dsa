@@ -17,7 +17,7 @@ import { assert } from "chai";
  * @returns boolean
  */
 function isSameSquare(arr1: number[], arr2: number[]): boolean {
-  if (arr1.length != arr2.length) return false;
+  if (arr1.length !== arr2.length) return false;
 
   for (let charValue of arr1) {
     let correctIndex = arr2.indexOf(charValue * charValue);
@@ -42,7 +42,7 @@ assert.isFalse(isSameSquare([1, 2, 3], [4, 5, 6]));
  * @returns boolean
  */
 function isSameSquareOptimized(arr1: number[], arr2: number[]) {
-  if (arr1.length != arr2.length) return false;
+  if (arr1.length !== arr2.length) return false;
 
   let frequencyCounter1: Record<string, number> = {};
   let frequencyCounter2: Record<string, number> = {};
@@ -59,7 +59,7 @@ function isSameSquareOptimized(arr1: number[], arr2: number[]) {
     if (!(parseInt(key) ** 2 in frequencyCounter2)) {
       return false;
     }
-    if (frequencyCounter2[parseInt(key) ** 2] != frequencyCounter1[key]) {
+    if (frequencyCounter2[parseInt(key) ** 2] !== frequencyCounter1[key]) {
       return false;
     }
   }

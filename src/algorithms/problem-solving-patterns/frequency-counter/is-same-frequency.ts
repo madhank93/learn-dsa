@@ -11,7 +11,7 @@ function isSameFrequency(num1: number, num2: number) {
   let occurrence1: Record<number, number> = {};
   let occurrence2: Record<number, number> = {};
 
-  if (num1.toString().length != num2.toString().length) return false;
+  if (num1.toString().length !== num2.toString().length) return false;
 
   for (let element of num1.toString()) {
     occurrence1[parseInt(element)] = (occurrence1[parseInt(element)] || 0) + 1;
