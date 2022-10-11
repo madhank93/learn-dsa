@@ -46,4 +46,52 @@ describe("Custom array tests", () => {
     expect(() => arr.get(-1)).to.toThrowError("Array index out of bound");
     expect(() => arr.get(10)).to.toThrowError("Array index out of bound");
   });
+
+  it("#pop, Verify last element from an array is removed", () => {
+    let arr = new CustomArray();
+    arr.push(1);
+    arr.push(2);
+    arr.push(3);
+
+    arr.pop();
+
+    expect(() => arr.get(2)).to.toThrowError("Array index out of bound");
+  });
+
+  it("#pop, Verify last element from an array is returned on pop", () => {
+    let arr = new CustomArray();
+    arr.push(1);
+    arr.push(2);
+    arr.push(3);
+
+    expect(arr.pop()).to.be.equal(3);
+    expect(arr.pop()).to.be.equal(2);
+  });
+
+  it("#pop, Verify after removing last element; length of an array is reduced", () => {
+    let arr = new CustomArray();
+    arr.push(1);
+    arr.push(2);
+    arr.push(3);
+
+    arr.pop();
+    let lengthAfterPop = arr.getLength();
+
+    expect(lengthAfterPop).to.be.equal(2);
+  });
+
+  it("#pop, Verify pop action throws an error when array size is less than zero or empty", () => {
+    let arr = new CustomArray();
+    arr.push(1);
+    arr.pop();
+
+    let emptyArr = new CustomArray();
+
+    expect(() => arr.pop()).to.toThrowError(
+      "Array is empty cannot perform pop() action"
+    );
+    expect(() => emptyArr.pop()).to.toThrowError(
+      "Array is empty cannot perform pop() action"
+    );
+  });
 });
