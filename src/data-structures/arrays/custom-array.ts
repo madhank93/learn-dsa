@@ -56,6 +56,9 @@ export default class CustomArray {
    * @returns
    */
   public insert(index: number, value: string | number): number {
+    if (index < 0 || index > this.length) {
+      throw new Error("Index is unavailable");
+    }
     this.shiftRight(index);
     this.data.set(index, value);
     return this.length;

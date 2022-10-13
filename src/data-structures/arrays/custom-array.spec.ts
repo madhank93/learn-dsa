@@ -94,4 +94,47 @@ describe("Custom array tests", () => {
       "Array is empty cannot perform pop() action"
     );
   });
+
+  it("#insert, Verify able to insert an element in the array", () => {
+    let arr = new CustomArray();
+    arr.push(1);
+    arr.push(2);
+    arr.push(5);
+    arr.insert(2, 3);
+
+    expect(arr.get(2)).to.be.equal(3);
+    expect(arr.getLength()).to.be.equal(4);
+  });
+
+  it("#insert, Verify elements are shifted to right after insertion and array remains intact", () => {
+    let arr = new CustomArray();
+    arr.push(1);
+    arr.push(2);
+    arr.push(4);
+    arr.insert(2, 3);
+
+    expect(arr.get(0)).to.be.equal(1);
+    expect(arr.get(1)).to.be.equal(2);
+    expect(arr.get(2)).to.be.equal(3);
+    expect(arr.get(3)).to.be.equal(4);
+    expect(() => arr.get(4)).to.toThrowError("Array index out of bound");
+  });
+
+  it("#insert, Verify insert action throws an error when an unavailable index is used", () => {
+    let arr = new CustomArray();
+
+    expect(() => arr.insert(10, "new value")).to.toThrowError(
+      "Index is unavailable"
+    );
+  });
+
+  it("#insert, Verify after inserting an element length of the array is returned", () => {
+    let arr = new CustomArray();
+    arr.push(1);
+    arr.push(3);
+    arr.insert(1, 2);
+    let arrayLength = arr.push(4);
+
+    expect(arrayLength).to.be.equal(4);
+  });
 });
