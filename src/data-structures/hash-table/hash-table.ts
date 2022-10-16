@@ -81,6 +81,7 @@ class HashTable {
       current = current.nextEntry
     ) {
       if (current.key === key) {
+        return true;
       }
     }
   }
@@ -100,11 +101,11 @@ class HashTable {
 
 const ht = new HashTable();
 
-ht.put(244, "Test");
-ht.put(244, "Test 1");
-ht.put(240, "Test");
-ht.put(250, "Test 2");
-ht.put(350, "Test 3");
+ht.put(244, 'Test');
+ht.put(244, 'Test 1');
+ht.put(240, 'Test');
+ht.put(250, 'Test 2');
+ht.put(350, 'Test 3');
 
 ht.print();
 
