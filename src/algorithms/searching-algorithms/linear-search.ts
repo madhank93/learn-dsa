@@ -9,7 +9,7 @@ import { expect } from "chai";
  * @returns if element found returns index or -1
  */
 function linearSearch(arr: number[], target: number) {
-  for (var i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] === target) return i;
   }
   return -1;

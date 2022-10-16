@@ -15,7 +15,7 @@ class HashTable {
   private size: number;
   private table: Array<Entry>;
 
-  constructor(size: number = 10) {
+  constructor(size = 10) {
     this.size = size;
     this.table = new Array<Entry>(this.size);
   }
@@ -58,7 +58,7 @@ class HashTable {
   }
 
   public getKeys() {
-    let keys: number[] = [];
+    const keys: number[] = [];
 
     for (let index = 0; index < this.size; index++) {
       for (

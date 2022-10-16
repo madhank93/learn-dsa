@@ -3,18 +3,18 @@ import CustomArray from "./custom-array";
 
 describe("Custom array tests", () => {
   it("#push, Add elements to an array", () => {
-    let arr = new CustomArray();
+    const arr = new CustomArray();
 
     arr.push("val 1");
     arr.push("2");
     arr.push("val 3");
-    let length = arr.push("val 4");
+    const length = arr.push("val 4");
 
     expect(length).to.be.equal(4);
   });
 
   it("#get, Verify able to retrieve the elements from an array based an index", () => {
-    let arr = new CustomArray();
+    const arr = new CustomArray();
 
     arr.push("val 1");
     arr.push("2");
@@ -26,7 +26,7 @@ describe("Custom array tests", () => {
   });
 
   it("#getLength, Verify the length of an array", () => {
-    let arr = new CustomArray();
+    const arr = new CustomArray();
 
     const initialLength = arr.getLength();
     arr.push("val 1");
@@ -38,7 +38,7 @@ describe("Custom array tests", () => {
   });
 
   it("#get, Verify it throws an error when index is out of bound", () => {
-    let arr = new CustomArray();
+    const arr = new CustomArray();
 
     arr.push("val 1");
     arr.push("2");
@@ -48,7 +48,7 @@ describe("Custom array tests", () => {
   });
 
   it("#pop, Verify last element from an array is removed", () => {
-    let arr = new CustomArray();
+    const arr = new CustomArray();
     arr.push(1);
     arr.push(2);
     arr.push(3);
@@ -59,7 +59,7 @@ describe("Custom array tests", () => {
   });
 
   it("#pop, Verify last element from an array is returned on pop", () => {
-    let arr = new CustomArray();
+    const arr = new CustomArray();
     arr.push(1);
     arr.push(2);
     arr.push(3);
@@ -69,23 +69,23 @@ describe("Custom array tests", () => {
   });
 
   it("#pop, Verify after removing last element; length of an array is reduced", () => {
-    let arr = new CustomArray();
+    const arr = new CustomArray();
     arr.push(1);
     arr.push(2);
     arr.push(3);
 
     arr.pop();
-    let lengthAfterPop = arr.getLength();
+    const lengthAfterPop = arr.getLength();
 
     expect(lengthAfterPop).to.be.equal(2);
   });
 
   it("#pop, Verify pop action throws an error when array size is less than zero or empty", () => {
-    let arr = new CustomArray();
+    const arr = new CustomArray();
     arr.push(1);
     arr.pop();
 
-    let emptyArr = new CustomArray();
+    const emptyArr = new CustomArray();
 
     expect(() => arr.pop()).to.toThrowError(
       "Array is empty cannot perform pop() action"
@@ -96,7 +96,7 @@ describe("Custom array tests", () => {
   });
 
   it("#insert, Verify able to insert an element in the array", () => {
-    let arr = new CustomArray();
+    const arr = new CustomArray();
     arr.push(1);
     arr.push(2);
     arr.push(5);
@@ -107,7 +107,7 @@ describe("Custom array tests", () => {
   });
 
   it("#insert, Verify elements are shifted to right after insertion and array remains intact", () => {
-    let arr = new CustomArray();
+    const arr = new CustomArray();
     arr.push(1);
     arr.push(2);
     arr.push(4);
@@ -121,7 +121,7 @@ describe("Custom array tests", () => {
   });
 
   it("#insert, Verify insert action throws an error when an unavailable index is used", () => {
-    let arr = new CustomArray();
+    const arr = new CustomArray();
 
     expect(() => arr.insert(10, "new value")).to.toThrowError(
       "Index is unavailable"
@@ -129,11 +129,11 @@ describe("Custom array tests", () => {
   });
 
   it("#insert, Verify after inserting an element length of the array is returned", () => {
-    let arr = new CustomArray();
+    const arr = new CustomArray();
     arr.push(1);
     arr.push(3);
     arr.insert(1, 2);
-    let arrayLength = arr.push(4);
+    const arrayLength = arr.push(4);
 
     expect(arrayLength).to.be.equal(4);
   });

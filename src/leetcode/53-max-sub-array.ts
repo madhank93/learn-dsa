@@ -19,8 +19,8 @@ expect(maxSubArrayBruteForce([1])).to.eql(1);
 expect(maxSubArrayBruteForce([5, 4, -1, 7, 8])).to.eql(23);
 
 function maxSubArray(arr: number[]) {
-  let sum: number = 0;
-  let max: number = -Infinity;
+  let sum = 0;
+  let max = -Infinity;
 
   arr.forEach((num: number) => {
     sum = Math.max(sum + num, num);

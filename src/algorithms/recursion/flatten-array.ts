@@ -9,8 +9,8 @@ type NestedArray<T> = Array<NestedArray<T> | T>;
  * @returns new array with all values flattened
  */
 function flattenArray<T>(arr: NestedArray<T>): T[] {
-  var result: T[] = [];
-  for (var i = 0; i < arr.length; i++) {
+  let result: T[] = [];
+  for (let i = 0; i < arr.length; i++) {
     if (Array.isArray(arr[i])) {
       result = result.concat(flattenArray(arr[i] as NestedArray<T>));
     } else {
