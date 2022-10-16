@@ -42,10 +42,5 @@
     "@types/chai": "^4.3.3",
     "chai": "^4.3.6",
     "dir-parser": "^2.1.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
   }
 }
