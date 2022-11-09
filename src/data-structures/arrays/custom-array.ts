@@ -1,5 +1,4 @@
-import { expect } from "chai";
-class CustomArray {
+export default class CustomArray {
   private length: number;
   private data: Map<number, string | number>;
 
@@ -19,6 +18,9 @@ class CustomArray {
     return this.length;
   }
 
+  /**
+   * The `getLength()` returns length of an array
+   */
   public getLength(): number {
     return this.length;
   }
@@ -28,14 +30,19 @@ class CustomArray {
    * @param index integer values
    * @returns the item at that index
    */
-  public get(index: number): string | number | undefined {
-    return this.data.get(index);
+  public get(index: number): string | number {
+    if (index < this.length && index >= 0) {
+      return this.data.get(index)!;
+    } else throw new Error("Array index out of bound");
   }
 
   /**
    * The `pop()` method removes the last element from an array and returns that element.
    */
   public pop() {
+    if (this.length <= 0) {
+      throw new Error("Array is empty cannot perform pop() action");
+    }
     const item = this.data.get(this.length - 1);
     this.data.delete(this.length - 1);
     this.length--;
@@ -49,6 +56,9 @@ class CustomArray {
    * @returns
    */
   public insert(index: number, value: string | number): number {
+    if (index < 0 || index > this.length) {
+      throw new Error("Index is unavailable");
+    }
     this.shiftRight(index);
     this.data.set(index, value);
     return this.length;
@@ -89,29 +99,3 @@ class CustomArray {
     this.length--;
   }
 }
-
-let arr1 = new CustomArray();
-
-arr1.push("val 1");
-arr1.push("val 2");
-arr1.push("val 3");
-arr1.push("val 4");
-
-expect(arr1.push("val 5")).to.eq(5); // ["val 1", "val 2", "val 3", "val 4", "val 5"] : length - 5
-expect(arr1.getLength()).to.eql(5);
-
-expect(arr1.pop()).to.eq("val 5"); // ["val 1", "val 2", "val 3", "val 4"] : length - 4
-expect(arr1.getLength()).to.eql(4);
-
-expect(arr1.delete(1)).to.eql(3); // ["val 1", "val 3", "val 4"] : length - 3
-expect(arr1.get(0)).to.eql("val 1");
-expect(arr1.get(1)).to.eql("val 3");
-expect(arr1.get(2)).to.eql("val 4");
-expect(arr1.get(3)).to.eql(undefined);
-expect(arr1.getLength()).to.eql(3);
-
-expect(arr1.insert(0, 0)).to.eql(4); // ["0", val 1", "val 3", "val 4"] : length - 4
-expect(arr1.get(0)).to.eql(0);
-expect(arr1.get(3)).to.eql("val 4");
-expect(arr1.get(4)).to.eql(undefined);
-expect(arr1.getLength()).to.eql(4);
