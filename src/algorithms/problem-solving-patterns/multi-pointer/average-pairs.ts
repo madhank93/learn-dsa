@@ -8,13 +8,13 @@ import { assert } from "chai";
  * @param average target average value
  */
 function findAveragePairs(arr: number[], targetAverage: number) {
-  let leftPointer: number = 0;
+  let leftPointer = 0;
   let rightPointer: number = arr.length - 1;
 
   if (arr.length === 0) return false;
 
   while (leftPointer < rightPointer) {
-    let avg: number = arr[leftPointer] + arr[rightPointer] / 2;
+    const avg: number = arr[leftPointer] + arr[rightPointer] / 2;
 
     if (avg === targetAverage) {
       return true;

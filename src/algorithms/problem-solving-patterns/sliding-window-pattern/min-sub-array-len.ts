@@ -6,4 +6,6 @@
  * @param arr Integer array
  * @param num a positive integer number
  */
-function minSubArrayLen(arr: number[], num: number) {}
+// function minSubArrayLen(arr: number[], num: number) {
+//   return true;
+// }

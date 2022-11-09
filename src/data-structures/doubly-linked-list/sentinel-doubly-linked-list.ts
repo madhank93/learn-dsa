@@ -46,7 +46,7 @@ class SentinelDoublyLinkedList {
       console.log(current!.value);
   }
 
-  private removeFromNode(deleteValue: SentinelDoublyLinkedNode | null) {}
+  //private removeFromNode(deleteValue: SentinelDoublyLinkedNode | null) {}
 
   public removeNode(deleteValue: number) {
     for (
@@ -55,7 +55,8 @@ class SentinelDoublyLinkedList {
       remove = this.head!.next
     ) {
       if (remove!.value === deleteValue) {
-        this.removeFromNode(remove);
+        //this.removeFromNode(remove);
+        return true;
       }
     }
   }

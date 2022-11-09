@@ -15,7 +15,7 @@ class HashTable {
   private size: number;
   private table: Array<Entry>;
 
-  constructor(size: number = 10) {
+  constructor(size = 10) {
     this.size = size;
     this.table = new Array<Entry>(this.size);
   }
@@ -58,7 +58,7 @@ class HashTable {
   }
 
   public getKeys() {
-    let keys: number[] = [];
+    const keys: number[] = [];
 
     for (let index = 0; index < this.size; index++) {
       for (
@@ -81,6 +81,7 @@ class HashTable {
       current = current.nextEntry
     ) {
       if (current.key === key) {
+        return true;
       }
     }
   }
@@ -100,11 +101,11 @@ class HashTable {
 
 const ht = new HashTable();
 
-ht.put(244, "Test");
-ht.put(244, "Test 1");
-ht.put(240, "Test");
-ht.put(250, "Test 2");
-ht.put(350, "Test 3");
+ht.put(244, 'Test');
+ht.put(244, 'Test 1');
+ht.put(240, 'Test');
+ht.put(250, 'Test 2');
+ht.put(350, 'Test 3');
 
 ht.print();
 

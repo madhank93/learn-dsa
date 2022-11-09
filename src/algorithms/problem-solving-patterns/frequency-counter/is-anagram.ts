@@ -6,20 +6,20 @@ import { assert } from "chai";
  * cinema , formed from iceman
  */
 function isAnagram(str1: string, str2: string): boolean {
-  let occurrence1: Record<string, number> = {};
-  let occurrence2: Record<string, number> = {};
+  const occurrence1: Record<string, number> = {};
+  const occurrence2: Record<string, number> = {};
 
   if (str1.length !== str2.length) return false;
 
-  for (let element of str1) {
+  for (const element of str1) {
     occurrence1[element] = (occurrence1[element] || 0) + 1;
   }
 
-  for (let element of str2) {
+  for (const element of str2) {
     occurrence2[element] = (occurrence2[element] || 0) + 1;
   }
 
-  for (let key in occurrence1) {
+  for (const key in occurrence1) {
     if (!(key in occurrence2)) {
       return false;
     }

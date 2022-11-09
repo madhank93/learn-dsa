@@ -8,7 +8,7 @@ import { expect } from "chai";
  * @param sum defaults to zero
  * @returns sum of all even numbers
  */
-function nestedEvenSum(obj: object, sum: number = 0): number {
+function nestedEvenSum(obj: object, sum = 0): number {
   const map: Map<string, any> = new Map(Object.entries(obj));
 
   map.forEach((value) => {

@@ -11,7 +11,7 @@ import { expect } from "chai";
 function maxSubArray(arr: number[], num: number): number {
   if (arr.length === 0 || num === 0) return 0;
 
-  let max: number = -Infinity;
+  let max = -Infinity;
   for (let i = 0; i < arr.length - num + 1; i++) {
     let temp = 0;
     for (let j = 0; j < num; j++) {
@@ -32,12 +32,12 @@ expect(maxSubArray([], 3)).to.equal(0);
 expect(maxSubArray([1, 2, 3, 4], 0)).to.equal(0);
 
 function maxSubArrayOptimized(arr: number[], num: number): number {
-  let maxSum: number = 0;
-  let tmpSum: number = 0;
+  let maxSum = 0;
+  let tmpSum = 0;
 
   if (arr.length === 0 || num === 0 || arr.length < num) return 0;
 
-  for (let i: number = 0; i < num; i++) {
+  for (let i = 0; i < num; i++) {
     maxSum = maxSum + arr[i];
   }
 

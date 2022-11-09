@@ -12,11 +12,11 @@ function areThereDuplicates(...args: number[] | string[]): boolean | null {
 
   if (args.length === 0) return null;
 
-  for (let value of args) {
+  for (const value of args) {
     occurrence[value] = (occurrence[value] || 0) + 1;
   }
 
-  for (let key in occurrence) {
+  for (const key in occurrence) {
     if (occurrence[key] > 1) return true;
   }
 

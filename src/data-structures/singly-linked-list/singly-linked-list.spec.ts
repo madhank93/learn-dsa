@@ -3,7 +3,7 @@ import SinglyLinkedList from "./singly-linked-list";
 
 describe("Singly linked list test", () => {
   it("#addToBack, Add Singly node to the list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(5);
 
     expect(sll.head?.value).toBe(5);
@@ -12,7 +12,7 @@ describe("Singly linked list test", () => {
   });
 
   it("#addToBack, Add more than two nodes to the list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(5);
     sll.append(6);
     sll.append(7);
@@ -23,21 +23,21 @@ describe("Singly linked list test", () => {
   });
 
   it("#remove, Remove an existing node from the list should return true", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(10);
 
     expect(sll.remove(10)).toBeTruthy();
   });
 
   it("#remove, Remove an non-existing element from the list should return false", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(10);
 
     expect(sll.remove(1)).toBeFalsy();
   });
 
   it("#remove, Remove head (first) node from the list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(5);
     sll.append(7);
     sll.append(8);
@@ -47,7 +47,7 @@ describe("Singly linked list test", () => {
   });
 
   it("#remove, Remove mid node from the list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(5);
     sll.append(7);
     sll.append(8);
@@ -58,7 +58,7 @@ describe("Singly linked list test", () => {
   });
 
   it("#remove, Remove last node from the list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(5);
     sll.append(7);
     sll.append(8);
@@ -69,7 +69,7 @@ describe("Singly linked list test", () => {
   });
 
   it("#remove, Remove Singly node from the list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(5);
     sll.remove(5);
 
@@ -78,12 +78,12 @@ describe("Singly linked list test", () => {
   });
 
   it("#remove, Remove node from an empty list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     expect(() => sll.remove(5)).toThrowError("Singly linked list is empty");
   });
 
   it("#insertAfter, Insert a node in the middle after the search node", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(10);
     sll.append(12);
     sll.insert(10, 11);
@@ -92,7 +92,7 @@ describe("Singly linked list test", () => {
   });
 
   it("#insertAfter, Insert a node after the tail", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(10);
     sll.append(20);
     sll.insert(20, 30);
@@ -101,7 +101,7 @@ describe("Singly linked list test", () => {
   });
 
   it("#insertAfter, Should return true if a node is found", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(10);
     sll.append(20);
 
@@ -109,7 +109,7 @@ describe("Singly linked list test", () => {
   });
 
   it("#insertAfter, Should return false if a node is not found", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(10);
     sll.append(20);
 
@@ -117,12 +117,12 @@ describe("Singly linked list test", () => {
   });
 
   it("#insertAfter, Insert node into an empty list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     expect(() => sll.insert(5, 10)).toThrowError("Singly linked list is empty");
   });
 
   it("#get, Access list the by index", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(10);
     sll.append(20);
 
@@ -131,7 +131,7 @@ describe("Singly linked list test", () => {
   });
 
   it("#get, Access list the by index out of range", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(10);
     sll.append(20);
 
@@ -140,7 +140,7 @@ describe("Singly linked list test", () => {
   });
 
   it("#push, Push a node into the list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(10);
     sll.append(20);
     sll.push(30);
@@ -149,7 +149,7 @@ describe("Singly linked list test", () => {
   });
 
   it("#push, Push a node into the empty list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.push(10);
     sll.push(20);
     sll.push(30);
@@ -158,7 +158,7 @@ describe("Singly linked list test", () => {
   });
 
   it("#push, Add a node into the list using append, push and insert", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(10);
     sll.push(20);
     sll.insert(20, 30);
@@ -168,7 +168,7 @@ describe("Singly linked list test", () => {
   });
 
   it("#pop, Remove a last item from the list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
     sll.append(10);
     sll.append(20);
     sll.pop();
@@ -182,13 +182,13 @@ describe("Singly linked list test", () => {
   });
 
   it("#pop, Remove a node from the empty list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
 
     expect(sll.pop()).toBeUndefined();
   });
 
   it("#reverse, Reverse a singly linked list", () => {
-    let sll = new SinglyLinkedList();
+    const sll = new SinglyLinkedList();
 
     sll.append(1);
     sll.append(2);

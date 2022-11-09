@@ -15,9 +15,9 @@ expect(twoSumBruteForce([3, 2, 4], 6)).to.eql([1, 2]);
 expect(twoSumBruteForce([3, 3], 6)).to.eql([0, 1]);
 
 function twoSumUsingMap(numArray: number[], target: number) {
-  let map = new Map<number, number>();
+  const map = new Map<number, number>();
   for (let i = 0; i < numArray.length; i++) {
-    let subtractedValue = target - numArray[i];
+    const subtractedValue = target - numArray[i];
     if (map.has(subtractedValue)) {
       return [map.get(subtractedValue), i];
     }

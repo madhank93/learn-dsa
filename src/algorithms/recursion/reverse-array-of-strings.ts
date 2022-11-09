@@ -8,7 +8,7 @@ import { expect } from "chai";
  */
 function reverseArrayOfStrings<T>(arr: T[]): T[] {
   if (arr.length === 1) return arr;
-  let res: T[] = reverseArrayOfStrings(arr.slice(1));
+  const res: T[] = reverseArrayOfStrings(arr.slice(1));
   res.push(arr[0]);
   return res;
 }

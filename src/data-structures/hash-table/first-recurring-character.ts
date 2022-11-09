@@ -1,5 +1,5 @@
 function getFirstRecurringCharacter(num: number[]) {
-  let occurrence: Map<number, number> = new Map();
+  const occurrence: Map<number, number> = new Map();
 
   for (let char = 0; char < num.length; char++) {
     if (occurrence.has(num[char])) {

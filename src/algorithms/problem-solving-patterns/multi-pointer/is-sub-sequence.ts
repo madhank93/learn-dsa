@@ -8,8 +8,8 @@ import { assert } from "chai";
  * @param str2 String argument two
  */
 function isSubsequence(str1: string, str2: string) {
-  let firstCounter: number = 0;
-  let secondCounter: number = 0;
+  let firstCounter = 0;
+  let secondCounter = 0;
 
   if (!str1) return true;
 
