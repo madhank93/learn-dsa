@@ -1,13 +1,13 @@
-import { defineConfig } from "vitest/config";
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   define: {
-    "import.meta.vitest": "undefined",
+    'import.meta.vitest': 'undefined',
   },
   test: {
-    //includeSource: ["src/**/*.ts"],
+    includeSource: ['src/**/*.ts'],
     coverage: {
-      reporter: ["text", "html-spa"],
+      reporter: ['text', 'html-spa'],
     },
   },
 });
