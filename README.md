@@ -28,4 +28,4 @@
 
 ### List of solved problems
 
-See [directory](DIRECTORY.md) for easier navigation and better overview of the project.
+See [directory](DIRECTORY.md) for easier navigation and better overview of the project
