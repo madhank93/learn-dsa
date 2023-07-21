@@ -1,3 +1,9 @@
+### To execute a file
+
+```ts
+node --loader ts-node/esm {filepath/fileName}
+```
+
 ### Resources
 
 - [Colt Steele - JS Algorithms and Data Structures](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/)

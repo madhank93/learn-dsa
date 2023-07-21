@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "DSA",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "doc": "docs"
   },
