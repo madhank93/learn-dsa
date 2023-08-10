@@ -6,6 +6,7 @@ async function getParseDirectoryStructure() {
     excludes: [
       ".git",
       ".vscode",
+      ".husky",
       "bin",
       "build",
       "coverage",
